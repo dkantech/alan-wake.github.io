@@ -1,10 +1,10 @@
 ---
 layout: page
-title: kakao의 오픈API
+title: DK A.N.T의 오픈API
 image: /files/covers/openapi.png
 permalink: /openapi/
 sitemap: yes
-excerpt: kakao의 오픈API를 소개합니다.
+excerpt: DK A.N.T의 오픈API를 소개합니다.
 tags: [openapi]
 ---
 ## [Kakao Developers](https://developers.kakao.com)
