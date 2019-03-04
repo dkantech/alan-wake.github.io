@@ -3,7 +3,7 @@ email: alan1011@dkant.net
 description: |
   {{설명}}
 baseurl: ''
-url: 'http://tech.kakao.com'
+url: 'http://alan-wake.github.io'
 timezone: Asia/Seoul 
 
 repository: alan-wake/alan-wake.github.io
@@ -49,7 +49,7 @@ exclude: [README.md, Gemfile, Gemfile.lock]
 keep_files: [assets, files]
 github: [metadata]
 # iolo's custom
-author: opensource@kakaocorp.com
+author: alan1011@dkant.net
 image: '/assets/images/default_blog_cover.jpg'
 asset_url: /assets
 #asset_url: //meta-kage.kakaocdn.net/dn/osa/blog/assets
