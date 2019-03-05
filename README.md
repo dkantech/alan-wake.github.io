@@ -3,11 +3,12 @@
 1. Log
     1. Logo
       * | Index | Type | Name | Size |
-        |---|---|---|---|
-        | 1 | PC | tech_logo.png | 123*21 |
-        | 2 | Mobile | tech_logo.png  | 99*17 |
-        | 3 | Mobile | tech_logo@2x.png | 198*34 |
-        | 4 | Mobile | tech_logo@3x.png | 297*51 |
+        |:---:|---|---|---|
+        | 1 | PC      | tech_logo.png    | 123*21 |
+        | 2 | Mobile  | tech_logo.png    | 99*17  |
+        | 3 | Mobile  | tech_logo@2x.png | 198*34 |
+        | 4 | Mobile  | tech_logo@3x.png | 297*51 |
+        | 5 | favicon | favicon.ico      | 16*16  |
 
 ==============
 
