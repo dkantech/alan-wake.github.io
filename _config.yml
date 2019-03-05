@@ -3,10 +3,10 @@ email: alan1011@dkant.net
 description: |
   {{설명}}
 baseurl: ''
-url: 'http://alan-wake.github.io'
+url: 'https://dkantech.github.io'
 timezone: Asia/Seoul 
 
-repository: alan-wake/alan-wake.github.io
+repository: dkantech/dkantech.github.io
 
 permalink: /:year/:month/:day/:title/
 
