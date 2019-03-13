@@ -1,9 +1,9 @@
 ---
 layout: page
-title: 기술 행사
+title: 행사
 permalink: /events/
 sitemap: yes
-excerpt: kakao가 주최하거나 후원한 기술 행사들을 소개합니다.
+excerpt: dkantech의 행사를 소개합니다.
 tags: [events]
 ---
 
