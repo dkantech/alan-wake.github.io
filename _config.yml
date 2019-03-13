@@ -3,7 +3,7 @@ email: alan1011@dkant.net
 description: |
   {{설명}}
 baseurl: ''
-url: 'https://dkantech.github.io'
+url: 'https://tech.dkant.net'
 timezone: Asia/Seoul 
 
 repository: dkantech/dkantech.github.io
