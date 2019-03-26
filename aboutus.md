@@ -2,9 +2,9 @@
 layout: page
 title: DK A.N.T의 오픈소스
 image: /files/covers/opensource.jpg
-permalink: /opensource/
+permalink: /aboutus/
 sitemap: yes
-excerpt: DK A.N.T의 오픈소스를 소개합니다.
+excerpt: DK A.N.T를 소개합니다.
 tags: []
 ---
 <a id="forkme" href="https://github.com/dkantech"></a>
