@@ -3,6 +3,27 @@ layout: default
 ---
 <div id="cover" class="container-fluid"
      {% if site.image %}style="background-image:url({{ site.image }});"{% endif %}>
+     <button id="menu-toggle" type="button">
+        <span class="sr-only">Toggle Navigation Menu</span>
+    </button>
+    <button id="search-toggle" type="button">
+        <span class="sr-only">Toggle Search Form</span>
+    </button>    
+
+    <ul class="search__results" id="results-container"></ul>
+    <div id="search">
+        <input id="search-input" type="search" placeholder="Search..." value="" />
+    </div>
+
+    <ul id="menu" class="nav">
+        <li class="{% if page.url != '/aboutus/' and page.url != '/openapi/' and page.url != '/events/' %} active {% endif %}"><a href="{{ base_path }}/">BLOG</a></li>
+        <li class="{% if page.url == '/aboutus/' %} active {% endif %}"><a href="{{ base_path }}/aboutus/">ABOUT US</a></li>
+        <!-- <li class="{% if page.url == '/openapi/' %} active {% endif %}"><a href="{{ base_path }}/openapi/">오픈API</a></li> -->
+        <li class="{% if page.url == '/events/' %} active {% endif %}"><a href="{{ base_path }}/events/">BUSINESS</a></li>
+        <li class="{% if page.url == '/events/' %} active {% endif %}"><a href="{{ base_path }}/events/">CONTACT US</a></li>
+    </ul>    
+
+
     {% if paginator.page == 1 %}
         <!--[if (gt IE 9)|!(IE)]><!-->
         <video loop muted preload="metadata" crossorigin="anonymous">
@@ -27,3 +48,19 @@ layout: default
         {{ content }}
     </div>
 </div>
+
+
+<script src="{{site.baseurl}}/dest/jekyll-search.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search2.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: '<li>No results found</li>',
+        limit: 15,
+        fuzzy: false,
+        exclude: ['Welcome']
+    })
+</script>
