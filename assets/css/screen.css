@@ -238,7 +238,7 @@ for small screen(<720px):
 
 #menu > li.active > a,
 #menu > li:hover > a {
-    color: #1e1e1e;
+    color: white;
 }
 
 #search {

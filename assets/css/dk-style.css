@@ -5,3 +5,11 @@
     background-color: transparent;
     top: 400px;
 }
+#header ul#menu{
+    border-top: 1px solid gray
+}
+
+#header #search{
+    top: 60px;
+    right: 480px
+}
