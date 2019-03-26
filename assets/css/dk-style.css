@@ -19,6 +19,7 @@
     line-height: 54px;
     border-bottom: 0
 }
+#menu > li.active,
 #menu > li:hover{
     border-bottom: 0
 }
