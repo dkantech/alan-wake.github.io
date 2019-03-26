@@ -21,9 +21,10 @@
         <li class="{% if page.url == '/events/' %} active {% endif %}"><a href="{{ base_path }}/events/">BUSINESS</a></li>
         <li class="{% if page.url == '/events/' %} active {% endif %}"><a href="{{ base_path }}/events/">CONTACT US</a></li>
     </ul>    
-    
-    {{site.image}}
-    {{page.image}}
+        
+    <div id="cover" class="container-fluid"
+        {% if site.image %}style="background-image: url({{ site.image }});"{% else if page.image %}style="background-image: url({{ page.image }});"{% endif %} >
+     </div>         
 </div>
 <!-- Script pointing to jekyll-search.js -->
 <script src="{{site.baseurl}}/dest/jekyll-search.js" type="text/javascript"></script>
