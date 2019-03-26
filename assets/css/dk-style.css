@@ -13,3 +13,7 @@
     top: 60px;
     right: 480px
 }
+
+#header ul#menu li a{
+    color: #fff
+}
