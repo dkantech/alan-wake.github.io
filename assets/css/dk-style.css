@@ -17,10 +17,14 @@
 }
 #menu li{
     line-height: 54px;
+    border-bottom: 0
 }
 #menu > li:hover{
     border-bottom: 0
 }
 #header ul#menu li a{
     color: #fff;
+}
+#wrapper{
+    background-color: #f3f7fd
 }
