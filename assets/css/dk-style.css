@@ -38,5 +38,6 @@
     color: #fff;
 }
 #wrapper{
-    background-color: #f3f7fd
+    background-color: #f3f7fd;
+    overflow-x: auto !important;
 }
