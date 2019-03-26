@@ -3,17 +3,26 @@
     position: absolute;
     width: 100%;
     background-color: transparent;
-    top: 400px;
+    top: 405px;
 }
 #header ul#menu{
-    border-top: 1px solid gray
-}
+    border-top: 1px solid gray;
+    height: 54px;
 
 #header #search{
     top: 60px;
     right: 480px
 }
 
+#header ul#menu{
+    line-height: 54px
+}
+#menu > li.active,
+#menu > li:hover{
+    background-color:rgba(212, 207, 224, 0.5);
+    border-bottom: 0
+    
+}
 #header ul#menu li a{
     color: #fff
 }
