@@ -61,8 +61,8 @@
     float: left;
 }
 .dk-container .left-wrap h2{
-    font-size: 31x;
-    font-weight: 600;
+    font-size: 31x !important; 
+    font-weight: 600 !important; 
 }
 .dk-container .left-wrap span{
     display: block;
