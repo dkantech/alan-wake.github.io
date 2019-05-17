@@ -11,9 +11,7 @@
     right: 480px;
     top: auto;
 }
-#header #search #search-input{
-    background-color: rgba(255,255,255,0.85);
-}
+
 #header ul#menu{
     border-top: 1px solid gray;
     height: 54px;
@@ -43,4 +41,5 @@
 #wrapper{
     background-color: #f3f7fd;
     overflow-x: auto !important;
+    position: relative;
 }
