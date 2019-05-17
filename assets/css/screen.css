@@ -285,7 +285,9 @@ for small screen(<720px):
     box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
     border-radius: 2px;
     border: 0;
-    z-index: 999; top: 45px; right: 0px;
+    z-index: 999; 
+    top: -30px; 
+    right: 0px;
     line-height: 22px;
 }
 .search__results.is-hidden {
