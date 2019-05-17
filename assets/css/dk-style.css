@@ -6,11 +6,6 @@
     top: 0;
     z-index: 55;
 }
-#header #search {
-    bottom: -60px !important;
-    right: 480px;
-    top: auto;
-}
 
 #header ul#menu{
     border-top: 1px solid gray;
