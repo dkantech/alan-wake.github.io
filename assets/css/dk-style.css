@@ -55,20 +55,26 @@
     box-sizing: content-box;
 }
 
-.left-wrap{
+.dk-container .left-wrap{
     width:50%;
-    height: 20vh;
+    height: 30vh;
     float: left;
 }
-.left-wrap span{
-    border: 2px solid darkred;
-    width: 6px;
+.dk-container .left-wrap h2{
+    font-size: 31x !important; 
+    font-weight: 600 !important; 
 }
-.left-wrap .bold{
-    font-weight: 600
+.dk-container .left-wrap span{
+    display: block;
+    width: 65px;
+    border-bottom: 5px solid darkred;
 }
-.right-wrap{
+.dk-container .left-wrap p.bold{
+    font-weight: 500;
+    margin-top: 50px;
+}
+.dk-container .right-wrap{
     width:50%;
-    height: 20vh;
+    height: 30vh;
     float: left;
 }
