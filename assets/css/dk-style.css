@@ -45,3 +45,21 @@
     padding: 20px;
     box-sizing: content-box;
 }
+
+.left-wrap{
+    width:50%;
+    height: 20vh;
+    float: left;
+}
+.left-wrap span{
+    border: 2px solid darkred;
+    width: 6px;
+}
+.left-wrap .bold{
+    font-weight: 600
+}
+.right-wrap{
+    width:50%;
+    height: 20vh;
+    float: left;
+}
