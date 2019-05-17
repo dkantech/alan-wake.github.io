@@ -60,13 +60,18 @@
     height: 30vh;
     float: left;
 }
+.dk-container .left-wrap h2{
+    font-size: 30px;
+    font-weight: 600;
+}
 .dk-container .left-wrap span{
     display: block;
     width: 65px;
     border-bottom: 5px solid darkred;
 }
 .dk-container .left-wrap p.bold{
-    font-weight: 500
+    font-weight: 500;
+    margin-top: 50px;
 }
 .dk-container .right-wrap{
     width:50%;
