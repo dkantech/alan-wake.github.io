@@ -39,6 +39,15 @@
     position: relative;
 }
 
+.search-wrap {
+    position:absolute;
+    width:960px;
+    bottom:-50px;
+    left:50%;
+    height:50px;left:50%;
+    margin-left:-480px;
+}
+
 .dk-container {
     max-width:1100px;
     margin: 20px auto 0 auto;
