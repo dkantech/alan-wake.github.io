@@ -55,13 +55,18 @@
     box-sizing: content-box;
 }
 
+.dk-container:after{
+    clear:both;
+    display:block;
+    content:"";
+}
+
 .dk-container .left-wrap{
-    width:50%;
-    height: 30vh;
+    width:40%;
     float: left;
 }
 .dk-container .left-wrap h2{
-    font-size: 31x !important; 
+    font-size: 31px !important; 
     font-weight: 600 !important; 
 }
 .dk-container .left-wrap span{
@@ -74,7 +79,35 @@
     margin-top: 50px;
 }
 .dk-container .right-wrap{
-    width:50%;
-    height: 30vh;
+    width:60%;
     float: left;
+}
+.dk-container .right-wrap .image-wrap{
+    width: 48%;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    float: left;
+    margin: 1%    
+}
+.dk-container .right-wrap .image-wrap div{
+    height: 100%;
+    border-radius: 4px;
+    background-size: cover;
+    
+}
+.dk-container .right-wrap .image-wrap > div > h2{
+    font-size: 50px;
+    position: absolute;
+    top:12%;
+    left:40%;
+    z-index: 50;
+    color: #fff;
+    
+}
+.dk-container .right-wrap .image-wrap > div > p{
+    position: absolute;
+    top:60%;
+    left:42%;
+    color: #fff;
 }
