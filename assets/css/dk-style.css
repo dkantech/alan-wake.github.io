@@ -1,3 +1,6 @@
+#wrapper {
+    padding-bottom: 100px;
+}
 #header{
     position: relative;
 }
@@ -8,4 +11,115 @@
     left:0;
     right: 0;
     background-color:rgba(0, 0, 0, 0.5)
+}
+.form-control{
+    width: 115px;
+    height: 33px;
+    border-radius: 17px;
+    border: 1px solid #e6e6e6;
+    padding: 0 30px 0 15px;
+    font-size: 14px;
+}
+ul li{
+    list-style: none;
+}
+#post-list .post-item{
+    position: relative;
+    margin: 0 40px;
+    padding: 50px 0 50px 40px;
+    border-bottom: 1px solid #e6e6e6;
+}
+#post-list .post-item a {
+    color: black !important;
+}
+#post-list .post-title {
+    font-size: 26px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#post-list .post-excerpt{
+    margin-top: 22px;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    max-height: 70px;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;    
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin: 0 160px 0 0;
+    max-width: 760px;
+}
+#post-list .author-image {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 100%;
+    background: url(../images/pc/default_pic_s.png) no-repeat center;
+    background-size: cover;
+}
+#post-list .author-name {
+    margin: 12px 0 0 0;
+    font-size: 14px;
+    color: #1e1e1e;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#post-list .post-date {
+    margin: 6px 0 0 0;
+    font-size: 12px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#post-list .post-tags {
+    margin-top: 18px;
+}
+a.tag {
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    padding: 0 10px;
+    border: 1px solid #e6e6e6;
+    vertical-align: middle;
+    color: #1e1e1e;
+    font-size: 12px;
+    line-height: 24px;
+}
+#pagination {
+    margin: 0;
+    padding: 33px 0;
+    text-align: center
+}
+#footer {
+    height: 100px;
+    padding: 20px 30px;
+    border-top: 1px solid #d4d4d4;
+    color: #505050;
+    text-align: center;
+    font-size: 13px;
+}
+#home-content{
+    margin-top: 60px; 
+}
+
+
+
+/*aboutus*/
+.dk-container{
+    max-width: 1140px;
+    margin: auto;
+}
+
+.post-meta{
+    position: absolute;
+    top: 63px;
+    right: 0;
+    width: 140px;
 }
