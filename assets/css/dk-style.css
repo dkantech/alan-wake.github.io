@@ -4,13 +4,30 @@
 #header{
     position: relative;
 }
+.header-logo{
+    max-width: 1000px;
+    height: 230px;
+    margin: auto;
+}
+.header-logo span{
+    width: 24%;
+    display: block;
+}
+.header-logo span svg{
+    width: 100%;
+    padding-top: 35px;
+}
 
 #navBox{
     position: absolute;
     bottom: 0;
     left:0;
     right: 0;
-    background-color:rgba(0, 0, 0, 0.5)
+    background-color:rgba(255, 255, 255, 0.5);
+    border-top: 1px solid gray;
+}
+.container{
+    max-width: 1040px;
 }
 .form-control{
     width: 115px;
@@ -22,11 +39,16 @@
 }
 ul li{
     list-style: none;
+
+}
+.navbar-nav li{
+    padding: 6px;
+    font-weight: 600;
 }
 #post-list .post-item{
     position: relative;
     margin: 0 40px;
-    padding: 50px 0 50px 40px;
+    padding: 50px 0 50px 0;
     border-bottom: 1px solid #e6e6e6;
 }
 #post-list .post-item a {
@@ -113,7 +135,7 @@ a.tag {
 
 /*aboutus*/
 .dk-container{
-    max-width: 1140px;
+    max-width: 990px;
     margin: auto;
 }
 
@@ -123,3 +145,59 @@ a.tag {
     right: 0;
     width: 140px;
 }
+.about-text-wrap{
+    margin-top: 60px
+}
+.about-text-wrap {
+
+}
+.about-img-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
+.about-img-wrap div{
+    background-size: cover;
+    height: 200px;
+    width: 45%;
+    margin: 10px;
+    position: relative;
+}
+.about-img-wrap div:first-child{
+    background-image: url(../images/dk-company.jpg);
+}
+.about-img-wrap div:nth-child(2){
+    background-image: url(../images/dk-solution2.jpg);
+    }
+.about-img-wrap div:nth-child(3){
+    background-image: url(../images/dk-patent.jpg);
+    }    
+.about-img-wrap div:last-child{
+    background-image: url(../images/dk-community.jpg);
+    }
+    
+
+
+/*search*/
+.search__results {
+    display: block;
+    background: #fff;
+    list-style: none;
+    padding: 0px;
+    font-size: 14px;
+    transition: 0.2s ease;
+    position: absolute;
+    width: 550px;
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    border-radius: 2px;
+    border: 0;
+    z-index: 999;
+    top: 30px;
+    right: 0px;
+    line-height: 22px;
+}
+
+
