@@ -19,7 +19,7 @@
         {% else %}
             <li id="page-prev" class="disabled"><span class="sr-only">No Previous Page</span></li>
         {% endif %}
-        {% for p in (first..last) %}
+        <!-- {% for p in (first..last) %}
             {% if p == paginator.page %}
                 <li class="page-number active">{{ p }}</li>
                 {% elsif p == 1 %}
@@ -28,7 +28,7 @@
                 <li class="page-number"><a
                             href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', p }}">{{ p }}</a></li>
             {% endif %}
-        {% endfor %}
+        {% endfor %} -->
         {% if paginator.next_page %}
             <li id="page-next"><a href="{{ site.baseurl }}{{ paginator.next_page_path }}"><span class="sr-only">Next Page</span></a>
             </li>
