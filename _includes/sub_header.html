@@ -1,0 +1,60 @@
+<article id="subheader">
+  <div class="sub-header-logo">
+      <h1>{{ page.title }}</h1>
+  </div>
+  <nav class="sub-navbar navbar-expand-md navbar-light" id="subNavBox">
+    <div class="container">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+         
+      <div class="collapse navbar-collapse" id="subNavbarsExampleDefault">
+          <span class='navbar-logo'>
+              <a href="/"><img src="/assets/images/web_logo.png"></a>
+          </span>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item {% if page.url == '/' %} active {% endif %}">            
+              <a class="nav-link" href="{{ base_path }}/">About DKA.N.T</a>
+          </li>
+
+          <li class="nav-item {% if page.url == '/business/' %} active {% endif %}">
+              <a class="nav-link" href="{{ base_path }}/business/">Business</a>
+          </li>
+
+          <li class="nav-item {% if page.url != '/' && page.url != '/business' && page.url != '/contactus' %} active {% endif %}">
+              <a class="nav-link" href="{{ base_path }}/technote/">Tech Note</a>
+          </li>
+
+          <li class="nav-item {% if page.url == '/contactus/' %} active {% endif %}">
+              <a class="nav-link" href="{{ base_path }}/contactus/">Contact us</a>
+          </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <ul class="search__results" id="results-container"></ul>
+            <div id="sub-search">
+                <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search..." value="" />
+        </form>
+          </div>        
+
+      </div>
+    </div>       
+  </nav>
+</article>
+
+<!-- Script pointing to jekyll-search.js -->
+<script src="{{site.baseurl}}/dest/jekyll-search.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search2.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: '<li>No results found</li>',
+        limit: 15,
+        fuzzy: false,
+        exclude: ['Welcome']
+    })
+</script><!-- #header -->

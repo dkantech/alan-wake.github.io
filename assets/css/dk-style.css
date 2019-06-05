@@ -1,3 +1,6 @@
+a{
+    color: #1e1e1e
+}
 #wrapper {
     padding-bottom: 100px;
 }
@@ -21,8 +24,59 @@ ul li{
     width: 100%;
     padding-top: 60px;
 }
+/* sub page header */
+#subheader .sub-header-logo{
+    position: relative;
+}
+#subheader .sub-header-logo h1{
+    left: 0;
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    right: 0;
+    text-align: center
+}
+.sub-header-logo{
+    height: 300px;
+    margin: auto;
+    background-color: #747b8b
+}
+#subNavBox{
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    border-top: 1px solid gray;
+    z-index:10000;
+    background-color:#fff;
+    padding: 6px 0;
+}
+.sub-navbar .navbar-logo {
+    height: 40px;
+    display: inline-block;
+}
+.sub-navbar .navbar-logo img {    
+    display: inline-block;
+    width:auto;
+    height:100%;
+}
 
-@media (max-width: 768px){    
+.sub-navbar-nav li{
+    padding: 6px;
+    font-weight: 600;
+}
+#subNavbarsExampleDefault .navbar-nav{
+    margin: auto
+}
+#sub-search #search-input{
+    width: 140px;
+}
+
+
+@media (max-width: 768px){  
+    .navbar-light .navbar-toggler {
+        border-color: rgba(255,255,255,0);
+    }
     .header-logo {
         height:60px;
     }
@@ -186,8 +240,56 @@ ul li{
     font-size: 20px;
     line-height: 15px;
 }
-
-
+@media (max-width: 768px){
+    
+    /* index - top */
+    .main-wrap{
+        position: relative;
+        height: 570px;
+    }
+    .main-left,
+    .main-top,
+    .main-bottom{
+        position: absolute;
+    }
+    .main-left{
+    height: 150px;
+    top: 350px;
+    left: 0   
+    }
+    .main-top{
+    width: 100%;
+    top:0;
+    left:0
+    }
+    .main-bottom{
+    top: 350px;
+    left: 25%
+    }
+    .main-bottom ul{
+        height: 150px;
+    }
+    .main-bottom ul li div h2{
+        font-size: 20px 
+    }
+    .main-bottom ul li div p{
+        font-size: 13px;
+        line-height: 0 
+    }
+    .main-left .main-text-wrap p{ 
+    font-size: 20px !important;
+    line-height: 20px !important;
+    }
+}
+@media (max-width: 576px){
+    .main-left{
+        display: none;
+    }
+    .main-bottom{
+        left: 0 !important;
+        width: 100%;
+    }
+}
 
 /* index - bottomItem*/
 #post-list:after {
@@ -274,6 +376,46 @@ a.tag {
     margin: 0;
     padding: 33px 0;
     text-align: center
+}
+@media (max-width: 768px){
+    
+    
+    /* index - bottom */
+    #post-list .post-item{
+        width: 100%;
+        height: 265px;
+        position: relative;
+    }
+    #post-list .post-title {
+        font-size: 20px;
+    }
+    #post-list .post-excerpt{
+        padding: 0 20px;
+        color: #595959;        
+    }
+    #post-list .post-tags {
+        margin: 5px 20px;
+    }
+    #post-list .author-image{
+        width: 35px;
+        height: 35px;
+        margin: 0;
+        float: left;
+    }
+    #post-list .author-name{
+        float: left;
+    }
+    #post-list .post-date{
+        float: right;
+        margin: 15px 45px 0 0;
+    }
+    .post-meta {
+        width: 100%;
+        bottom: 15px;
+        left: 20px;
+        margin-left: 0
+    }
+
 }
 
 
@@ -363,87 +505,76 @@ a.tag {
 }
 
 
-@media (max-width: 768px){
-    /* header */
-      
-    .navbar-light .navbar-toggler {
-        border-color: rgba(255,255,255,0);
-    }
 
-    
-    /* index - top */
-    .main-wrap{
-        position: relative;
-        height: 570px;
-    }
-    .main-left,
-    .main-top,
-    .main-bottom{
-        position: absolute;
-    }
-    .main-left{
-    height: 150px;
-    top: 350px;
-    left: 0   
-    }
-    .main-top{
+/* post */
+#cover{
     width: 100%;
-    top:0;
-    left:0
-    }
-    .main-bottom{
-    top: 350px;
-    left: 25%
-    }
-    .main-bottom ul{
-        height: 150px;
-    }
-    .main-bottom ul li div h2{
-        font-size: 20px 
-    }
-    .main-bottom ul li div p{
-        font-size: 13px;
-        line-height: 0 
-    }
-    .main-left .main-text-wrap p{ 
-    font-size: 20px !important;
-    line-height: 20px !important;
-    }
-
-    /* index - bottom */
-    #post-list .post-item{
-        width: 100%;
-        height: 265px;
-        position: relative;
-    }
-    #post-list .post-title {
-        font-size: 20px;
-    }
-    #post-list .post-excerpt{
-        padding: 0 20px;
-        color: #595959;        
-    }
-    #post-list .post-tags {
-        margin: 5px 20px;
-    }
-    #post-list .author-image{
-        width: 35px;
-        height: 35px;
-        margin: 0;
-        float: left;
-    }
-    #post-list .author-name{
-        float: left;
-    }
-    #post-list .post-date{
-        float: right;
-        margin: 15px 45px 0 0;
-    }
-    .post-meta {
-        width: 100%;
-        bottom: 15px;
-        left: 20px;
-        margin-left: 0
-    }
-
+    border-bottom: 1px solid #cfcfcf;
+    padding: 10px 0;
 }
+#cover:after{
+    display: block;
+    clear: both;
+    content: ""
+}
+#cover div{
+    max-width: 1040px;
+    padding-top: 2px;
+    margin: auto;
+}
+#cover > div >  p{
+    float: left;
+    padding-top: 18px;
+}
+#cover div p a{
+    background-color: #efefef;
+    padding: 5px 6px;
+    border-radius: 3px;
+}
+#post-author{
+    float: right;
+}
+#post-author .post-author-item {
+    float: left;
+    padding-right: 15px;
+}
+#post-author a {
+    display: inline-block;
+}
+
+#post-author p {
+    margin:0;
+}
+#author-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-size: cover;
+}
+.post-author-item .post-date{
+    color: #7f7f7f
+}
+#content{
+    padding: 50px 0;
+}
+#post-prev h3,
+#post-next h3{
+    font-size: 20px
+}
+main{
+    position: relative;
+}
+ #back-to-top{
+    width: 40px;
+    height: 40px;
+    background-color: #a1a1a1;
+    border-radius: 100%;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    display: block;
+    color: #fff
+}
+
+
+
