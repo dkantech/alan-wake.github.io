@@ -599,3 +599,73 @@ ol{
 
 
 
+/* tech-post-item */
+#tech-post-list:after {
+  display:block;
+  clear:both;
+  content:"";
+}
+#tech-post-list{
+  padding: 50px 0;
+}
+#tech-post-list .post-item{
+  position: relative;
+  width: 100%;
+  float: left;
+  height: 400px;
+}
+#tech-post-list .post-item:nth-child(odd){
+  background-color: #ebeae6
+}
+#tech-post-list .post-item a {
+  color: black !important;
+}
+#tech-post-list .post-title {
+  font-size: 26px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 20px;
+}
+#tech-post-list .post-excerpt{
+  padding: 5px 20px;
+  font-size: 14px;
+  line-height: 24px;
+  max-height: 82px;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;    
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+#tech-post-list .author-image {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  border-radius: 100%;
+  background: url(../images/pc/default_pic_s.png) no-repeat center;
+  background-size: cover;
+}
+#tech-post-list .author-name {
+  margin: 12px 0 0 0;
+  font-size: 14px;
+  color: #1e1e1e;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#tech-post-list .post-date {
+  margin: 6px 0 0 0;
+  font-size: 12px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #525353
+}
+#tech-post-list .post-tags {
+  margin: 20px;
+}

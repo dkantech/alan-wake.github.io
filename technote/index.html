@@ -1,6 +1,10 @@
 ---
 layout: default
+title: 기술 블로그
+excerpt: 기술 블로그
+tags: []
 ---
+
 <!-- <div id="cover" class="container-fluid"
      {% if page.image %}style="background-image: url({{ page.image }});"{% endif %}>
     <div>
@@ -8,16 +12,13 @@ layout: default
         <p>{{ page.description | newline_to_br }}</p>
     </div>
 </div> -->
-
-<div class="dk-container">    
-    <ul id="post-list">
-    {{paginator}}
+<div class="dk-container">  
+    <ul id="tech-post-list">
         {% for post in paginator.posts %}
-            {% include item.html %}
+            {% include technote_item.html %}
         {% endfor %}
     </ul>
-    {% include pagination.html %}
-</div> 
-
-
+</div>
+<!-- Pagination links -->
+{% include pagination.html %}
 
