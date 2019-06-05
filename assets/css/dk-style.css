@@ -51,11 +51,13 @@ ul li{
     background-color:#fff;
     padding: 6px 0;
 }
-.sub-navbar .navbar-logo {
+.sub-navbar .navbar-logo,
+.mbnavbar-logo {
     height: 40px;
     display: inline-block;
 }
-.sub-navbar .navbar-logo img {    
+.sub-navbar .navbar-logo img,
+.mbnavbar-logo img {    
     display: inline-block;
     width:auto;
     height:100%;
@@ -71,7 +73,14 @@ ul li{
 #sub-search #search-input{
     width: 140px;
 }
-
+.mobliesize{
+    position: absolute;
+    top: 8px;
+    right: 0;
+}
+.mbnavbar-logo{
+    display: none
+}
 
 @media (max-width: 768px){  
     .navbar-light .navbar-toggler {
@@ -82,6 +91,9 @@ ul li{
     }
     .header-logo span {
         display:none !important;
+    }
+    .mbnavbar-logo{
+        display: block
     }
 }
 
@@ -526,6 +538,11 @@ a.tag {
     float: left;
     padding-top: 18px;
 }
+@media (max-width: 768px){
+#cover > div >  p{
+    font-size: 10px;
+}
+}
 #cover div p a{
     background-color: #efefef;
     padding: 5px 6px;
@@ -550,13 +567,14 @@ a.tag {
     height: 50px;
     border-radius: 100%;
     background-size: cover;
+    border: 1px solid #e2e2e2;
 }
 .post-author-item .post-date{
     color: #7f7f7f
 }
-#content{
+/* #content{
     padding: 50px 0;
-}
+} */
 #post-prev h3,
 #post-next h3{
     font-size: 20px
@@ -574,6 +592,9 @@ main{
     bottom: 50px;
     display: block;
     color: #fff
+}
+ol{
+    padding: 0 15px;
 }
 
 
