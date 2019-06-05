@@ -1,0 +1,39 @@
+---
+layout: default
+title: 기술 블로그
+excerpt: 기술 블로그
+tags: []
+---
+
+<!-- <div id="cover" class="container-fluid"
+     {% if page.image %}style="background-image: url({{ page.image }});"{% endif %}>
+    <div>
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.description | newline_to_br }}</p>
+    </div>
+</div> -->
+<div class="dk-container">  
+    <ul id="post-list">
+        {% for post in paginator.posts %}
+            {% include technote_item.html %}
+        {% endfor %}
+    </ul>
+
+<!-- Pagination links -->
+<div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+    {% else %}
+      <span class="previous">Previous</span>
+    {% endif %}
+    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    {% else %}
+      <span class="next ">Next</span>
+    {% endif %}
+  </div>
+
+</div> 
+
+
