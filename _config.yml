@@ -69,3 +69,13 @@ google_plus:
   username: kakaodev
 github_url:
   username: dkantech
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - any_additional_item
