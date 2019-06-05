@@ -48,7 +48,6 @@ defaults:
     values:
       layout: tag
 
-exclude: [README.md, Gemfile, Gemfile.lock]
 
 keep_files: [assets, files]
 github: [metadata]
@@ -69,3 +68,14 @@ google_plus:
   username: kakaodev
 github_url:
   username: dkantech
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - any_additional_item
