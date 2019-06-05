@@ -1,6 +1,6 @@
 <article id="subheader">
-  <div class="sub-header-logo">
-      <h1>{{ page.title }}</h1>
+  <div class="sub-header-logo" {% if page.image %}style="background-image: url({{ page.image }});"{% else %} style="background-image: url({{ '/assets/images/vision.jpg' }});" {% endif %}>
+      <h1>{{ page.title }}</h1>      
   </div>
   <nav class="sub-navbar navbar-expand-md navbar-light" id="subNavBox">
     <div class="container">
@@ -13,7 +13,7 @@
           <span class='navbar-logo'>
               <a href="/"><img src="/assets/images/web_logo.png"></a>
           </span>
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto">            
           <li class="nav-item {% if page.url == '/' %} active {% endif %}">            
               <a class="nav-link" href="{{ base_path }}/">About DKA.N.T</a>
           </li>
@@ -22,10 +22,10 @@
               <a class="nav-link" href="{{ base_path }}/business/">Business</a>
           </li>
 
-          <li class="nav-item {% if page.url != '/' && page.url != '/business' && page.url != '/contactus' %} active {% endif %}">
+          <li class="nav-item {% if page.url != '/' && page.url != '/business/' && page.url != '/contactus/' %} active {% endif %}">
               <a class="nav-link" href="{{ base_path }}/technote/">Tech Note</a>
           </li>
-
+          
           <li class="nav-item {% if page.url == '/contactus/' %} active {% endif %}">
               <a class="nav-link" href="{{ base_path }}/contactus/">Contact us</a>
           </li>
