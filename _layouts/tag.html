@@ -15,13 +15,12 @@ layout: default
 
 <div id="content" class="container">
     <div id="tag-content" role="main">
-        <ul id="post-list">
+        <ul id="tech-post-list">
             {% for post in site.posts %}
                 {% if post.tags contains page.name %}
-                    {% include item.html %}
+                    {% include technote_item.html %}
                 {% endif %}
             {% endfor %}
         </ul>
-        {% include pagination.html %}
     </div>
 </div>
