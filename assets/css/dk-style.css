@@ -1,11 +1,11 @@
 a{
     color: #1e1e1e
 }
-#wrapper {
-    padding-bottom: 100px;
-}
 ul li{
     list-style: none;
+}
+#wrapper {
+    padding-bottom: 100px;
 }
 #header{
     position: relative;
@@ -24,6 +24,8 @@ ul li{
     width: 100%;
     padding-top: 60px;
 }
+
+
 /* sub page header */
 #subheader .sub-header-logo{
     position: relative;
@@ -62,13 +64,13 @@ ul li{
     width:auto;
     height:100%;
 }
-
 .sub-navbar-nav li{
     padding: 6px;
     font-weight: 600;
 }
 #subNavbarsExampleDefault .navbar-nav{
-    margin: auto
+    margin: auto;
+    font-size: 14px
 }
 #sub-search #search-input{
     width: 140px;
