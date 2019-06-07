@@ -73,7 +73,7 @@ ul li{
     font-size: 14px
 }
 #sub-search #search-input{
-    width: 140px;
+    width: 120px;
 }
 .mobliesize{
     position: absolute;
@@ -84,7 +84,7 @@ ul li{
     display: none
 }
 
-@media (max-width: 768px){  
+@media (max-width: 767px){  
     .navbar-light .navbar-toggler {
         border-color: rgba(255,255,255,0);
     }
