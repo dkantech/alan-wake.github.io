@@ -24,6 +24,9 @@ ul li{
     width: 100%;
     padding-top: 60px;
 }
+.navbar-logo{
+    display: none
+}
 
 
 /* sub page header */
@@ -31,11 +34,11 @@ ul li{
     position: relative;
 }
 #subheader .sub-header-logo h1{
-    left: 0;
     position: absolute;
+    left: 0;
+    right: 0;
     top: 50%;
     color: #fff;
-    right: 0;
     text-align: center
 }
 .sub-header-logo{
@@ -84,7 +87,7 @@ ul li{
     display: none
 }
 
-@media (max-width: 767px){  
+@media (max-width: 768px){  
     .navbar-light .navbar-toggler {
         border-color: rgba(255,255,255,0);
     }
@@ -95,7 +98,8 @@ ul li{
         display:none !important;
     }
     .mbnavbar-logo{
-        display: block
+        display: block;
+        padding: 0 15px;
     }
 }
 
@@ -111,7 +115,7 @@ ul li{
     background-color:#fff;
 }
 
-.navbar .navbar-logo {
+.sub-navbar .navbar-logo {
     height: 40px;
     display: inline-block;
 }
@@ -122,16 +126,13 @@ ul li{
         bottom: auto;
         border-style: none;
     }    
-}
 
-@media (min-width: 768px){
-  
-    .navbar .navbar-logo {
+    .navbar-logo {
         display:none !important;
     }
 }
 
-.navbar .navbar-logo img {    
+.navbar-logo img {    
     display: inline-block;
     width:auto;
     height:100%;
@@ -424,10 +425,10 @@ a.tag {
         margin: 15px 45px 0 0;
     }
     .post-meta {
-        width: 100%;
-        bottom: 15px;
-        left: 20px;
-        margin-left: 0
+        width: 100% !important;
+        bottom: 15px !important;
+        left: 20px !important;
+        margin-left: 0 !important;
     }
 
 }
@@ -670,4 +671,7 @@ ol{
 }
 #tech-post-list .post-tags {
   margin: 20px;
+}
+#post-content{
+    padding: 20px 0;
 }
