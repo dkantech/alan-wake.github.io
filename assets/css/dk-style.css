@@ -1,5 +1,6 @@
 a{
-    color: #1e1e1e
+    color: #1e1e1e;
+    text-decoration: none
 }
 ul li{
     list-style: none;
@@ -328,7 +329,7 @@ ul li{
     color: black !important;
 }
 #post-list .post-title {
-    font-size: 26px;
+    font-size: 21px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -603,6 +604,12 @@ ol{
 
 
 /* tech-post-item */
+#tech-post-list .post-title, 
+#tech-post-list .tech-post-excerpt{
+    margin: 0px 160px 0 0;
+    max-width: 620px;
+}
+
 #tech-post-list:after {
   display:block;
   clear:both;
@@ -612,44 +619,42 @@ ol{
   padding: 50px 0;
 }
 #tech-post-list .post-item{
-  position: relative;
-  width: 100%;
-  float: left;
-  height: 400px;
+    list-style: none;
+    position: relative;
+    margin: 0 40px;
+    padding: 25px 0 25px 40px;
+    border-bottom: 1px solid #e6e6e6;
 }
-#tech-post-list .post-item:nth-child(odd){
-  background-color: #ebeae6
-}
+
 #tech-post-list .post-item a {
   color: black !important;
 }
 #tech-post-list .post-title {
-  font-size: 26px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 20px;
+    font-size: 26px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
-#tech-post-list .post-excerpt{
-  padding: 5px 20px;
-  font-size: 14px;
-  line-height: 24px;
-  max-height: 82px;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow: hidden;    
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+#tech-post-list .tech-post-excerpt{
+    margin-top: 22px;
+    font-size: 14px;
+    line-height: 24px;
+    max-height: 48px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
 }
-#tech-post-list .author-image {
+#tech-post-list .tech-author-image {
   display: block;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   margin: auto;
   border-radius: 100%;
   background: url(../images/pc/default_pic_s.png) no-repeat center;
-  background-size: cover;
+  background-size: cover;  
 }
 #tech-post-list .author-name {
   margin: 12px 0 0 0;
@@ -671,7 +676,94 @@ ol{
 }
 #tech-post-list .post-tags {
   margin: 20px;
+  max-width: 620px;
 }
 #post-content{
     padding: 20px 0;
 }
+
+
+#tech-post-list .tech-post-meta{
+position: absolute;
+    top: 63px;
+    right: 0;
+    width: 140px;
+}
+
+@media (max-width: 768px){
+#tech-post-list .post-item{
+        margin: 0 15px;
+        padding: 20px 0 60px 0;
+        height: 240px;
+    }
+
+#tech-post-list .post-title {
+    font-size: 18px;
+    line-height: 26px;
+    white-space: normal;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    margin: 0;
+    font-weight: 600
+    }
+
+#tech-post-list .tech-post-excerpt{
+    margin: 20px  0;
+    font-size: 12px;
+}
+    #tech-post-list .post-tags {
+        margin: 0
+    }
+    #tech-post-list .tech-post-meta{
+    width: 100%;
+    top: auto;
+    padding: 15px 0;
+ 
+}
+#tech-post-list .tech-author-image{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    float: left;
+}
+#tech-post-list .author-name {
+    text-align: left;
+    float: left;
+    padding: 5px;
+    margin: 0
+}
+#tech-post-list .post-date{
+    float: right;
+    margin: 0;
+    font-size: 13px;
+    line-height: 32px;
+}
+
+
+}
+
+
+/* pageination */
+
+
+.pagination{
+    display: block;
+    padding: 0;
+    text-align: center;
+}
+.previous,
+.next {
+    background-size: 6px 11px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+.previous{
+    background: url(../images/icon_pre.png) no-repeat center;
+}
+.next {
+    background: url(../images/icon_next.png) no-repeat center;
+}
+
