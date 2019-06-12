@@ -8,14 +8,25 @@ ul li{
 #wrapper {
     padding-bottom: 100px;
 }
-#header{
+
+
+/* header */
+#header,
+.container{
     position: relative;
+}
+.container{
+    max-width: 1040px;
 }
 .header-logo {
     max-width: 1000px;
     height: 230px;
     margin: auto;
     padding-left: 10px;    
+}
+.navbar-logo{
+    display: block;
+    height: 40px;
 }
 .header-logo span{
     width: 230px;
@@ -25,27 +36,45 @@ ul li{
     width: 100%;
     padding-top: 60px;
 }
-.navbar-logo{
-    display: none
+#navBox{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right: 0;
+    border-top: 1px solid gray;
+    z-index:10000;
+    background-color:#fff;
+}
+.navbar-logo img {    
+    display: inline-block;
+    width:auto;
+    height:100%;
+}
+.navbar-nav li{
+    padding: 6px;
+    font-weight: 600;
+}
+.navbar-toggler{
+    position: absolute;
+    right: 0;
+    top: 2px;
 }
 
 
 /* sub page header */
-#subheader .sub-header-logo{
+#subheader .sub-header{
     position: relative;
+    height: 300px;
+    margin: auto;
+    background-color: #747b8b
 }
-#subheader .sub-header-logo h1{
+#subheader .sub-header h1{
     position: absolute;
     left: 0;
     right: 0;
     top: 50%;
     color: #fff;
     text-align: center
-}
-.sub-header-logo{
-    height: 300px;
-    margin: auto;
-    background-color: #747b8b
 }
 #subNavBox{
     position: absolute;
@@ -57,35 +86,36 @@ ul li{
     background-color:#fff;
     padding: 6px 0;
 }
-.sub-navbar .navbar-logo,
 .mbnavbar-logo {
     height: 40px;
     display: inline-block;
-}
-.sub-navbar .navbar-logo img,
-.mbnavbar-logo img {    
-    display: inline-block;
-    width:auto;
-    height:100%;
-}
-.sub-navbar-nav li{
-    padding: 6px;
-    font-weight: 600;
 }
 #subNavbarsExampleDefault .navbar-nav{
     margin: auto;
     font-size: 14px
 }
-#sub-search #search-input{
-    width: 120px;
+.mbnavbar-logo{
+    display: none
+}
+.mbnavbar-logo img {    
+    width:auto;
+    height:100%;
 }
 .mobliesize{
     position: absolute;
     top: 8px;
     right: 0;
 }
-.mbnavbar-logo{
-    display: none
+.form-control{
+    width: 115px;
+    height: 33px;
+    border-radius: 17px;
+    border: 1px solid #e6e6e6;
+    padding: 0 30px 0 15px;
+    font-size: 14px;
+}
+#sub-search #search-input{
+    width: 120px;
 }
 
 @media (max-width: 768px){  
@@ -98,62 +128,22 @@ ul li{
     .header-logo span {
         display:none !important;
     }
+    #navBox{
+        top: 0;
+        bottom: auto;
+        border-style: none;
+    }    
+    .navbar-logo {
+        display:none !important;
+        height: 40px;
+    }
     .mbnavbar-logo{
         display: block;
         padding: 0 15px;
     }
 }
 
-#navBox{
-    position: absolute;
-    bottom:0;
-    left:0;
-    right: 0;
-    /* background-color:rgba(255, 255, 255, 0.5); */
 
-    border-top: 1px solid gray;
-    z-index:10000;
-    background-color:#fff;
-}
-
-.sub-navbar .navbar-logo {
-    height: 40px;
-    display: inline-block;
-}
-
-@media (max-width: 768px) {
-    #navBox{
-        top: 0;
-        bottom: auto;
-        border-style: none;
-    }    
-
-    .navbar-logo {
-        display:none !important;
-    }
-}
-
-.navbar-logo img {    
-    display: inline-block;
-    width:auto;
-    height:100%;
-}
-
-.navbar-nav li{
-    padding: 6px;
-    font-weight: 600;
-}
-.container{
-    max-width: 1040px;
-}
-.form-control{
-    width: 115px;
-    height: 33px;
-    border-radius: 17px;
-    border: 1px solid #e6e6e6;
-    padding: 0 30px 0 15px;
-    font-size: 14px;
-}
 
 /*index - Top*/
 #home-content{
@@ -167,13 +157,18 @@ ul li{
     content: "";
     clear: both;
 }
+.main-left,
+.main-top{
+    position: relative;
+    float: left;
+}
 .main-left{
     width: 25%;
     height: 570px;
-    float: left;
-    position: relative;
 }
-.main-left img{
+.main-left img,
+.main-bottom ul li img,
+.main-top img{
     width: 100%;
     height: 100%;
 }
@@ -191,34 +186,30 @@ ul li{
 .main-top{
     width: 75%;
     height: 350px;
-    position: relative;
-    float: left;
 }
  .main-top img{
-    width: 100%;
-    height: 100%;
     position: absolute; 
     top: 0;
     left: 0;
 }
- .main-top .u-text-wrap{
-    position: absolute; 
-    top: 20px;
-    left: 25px;
-    z-index: 5;
-    color: white 
-}
+.main-top .u-text-wrap,
 .main-top .d-text-wrap{
     position: absolute; 
+    z-index: 5;
+    color: #e6e6e6;
+}
+ .main-top .u-text-wrap{
+    top: 20px;
+    left: 25px;
+}
+.main-top .d-text-wrap{
     bottom: 0;
     right: 30px;
-    z-index: 5;
     width: 260px;
     height: 165px;
     font-size: 12px;
     line-height: 9px;
     text-align: right;
-    color: #e6e6e6;
 }
 .main-bottom{
     width: 75%;
@@ -239,10 +230,6 @@ ul li{
  .main-bottom ul li:nth-child(3){
     background-color: #a7a7a7
 }
-.main-bottom ul li img{
-    width: 100%;
-    height: 100%;
-}
  .main-bottom ul li div{
     position: absolute;
     top: 25px;
@@ -257,7 +244,6 @@ ul li{
     line-height: 15px;
 }
 @media (max-width: 768px){
-    
     /* index - top */
     .main-wrap{
         position: relative;
@@ -328,11 +314,15 @@ ul li{
 #post-list .post-item a {
     color: black !important;
 }
+#post-list .author-name,
+#post-list .post-date,
 #post-list .post-title {
-    font-size: 21px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+#post-list .post-title {
+    font-size: 21px;
     padding: 20px;
 }
 #post-list .post-excerpt{
@@ -361,18 +351,11 @@ ul li{
     font-size: 14px;
     color: #1e1e1e;
     text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
 }
 #post-list .post-date {
     margin: 6px 0 0 0;
     font-size: 12px;
     text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    color: #525353
 }
 #post-list .post-tags {
     margin: 20px;
@@ -394,8 +377,6 @@ a.tag {
     text-align: center
 }
 @media (max-width: 768px){
-    
-    
     /* index - bottom */
     #post-list .post-item{
         width: 100%;
@@ -431,7 +412,6 @@ a.tag {
         left: 20px !important;
         margin-left: 0 !important;
     }
-
 }
 
 
@@ -449,9 +429,6 @@ a.tag {
 }
 .about-text-wrap{
     margin-top: 60px
-}
-.about-text-wrap {
-
 }
 .about-img-wrap{
     display: flex;
@@ -491,16 +468,21 @@ a.tag {
     font-size: 14px;
     transition: 0.2s ease;
     position: absolute;
-    width: 550px;
+    width: 350px;
     -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
     box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
     border-radius: 2px;
     border: 0;
     z-index: 999;
-    top: 30px;
+    top: 50px;
     right: 0px;
     line-height: 22px;
 }
+.search__results > li{
+    border-top: 1px solid #f0f0f0;
+    padding: 10px;
+}
+
 
 /* footer */
 #footer {
@@ -576,9 +558,7 @@ a.tag {
 .post-author-item .post-date{
     color: #7f7f7f
 }
-/* #content{
-    padding: 50px 0;
-} */
+
 #post-prev h3,
 #post-next h3{
     font-size: 20px
@@ -594,8 +574,10 @@ main{
     position: fixed;
     right: 20px;
     bottom: 50px;
-    display: block;
-    color: #fff
+    color: #fff;
+    line-height: 36px;
+    text-align: center;
+    display: none
 }
 ol{
     padding: 0 15px;
@@ -629,11 +611,16 @@ ol{
 #tech-post-list .post-item a {
   color: black !important;
 }
-#tech-post-list .post-title {
-    font-size: 26px;
+#tech-post-list .post-title,
+#tech-post-list .author-name,
+#tech-post-list .post-date{
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+#tech-post-list .post-title {
+    font-size: 26px;
+
 }
 #tech-post-list .tech-post-excerpt{
     margin-top: 22px;
@@ -661,17 +648,11 @@ ol{
   font-size: 14px;
   color: #1e1e1e;
   text-align: center;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 #tech-post-list .post-date {
   margin: 6px 0 0 0;
   font-size: 12px;
   text-align: center;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   color: #525353
 }
 #tech-post-list .post-tags {
@@ -701,7 +682,6 @@ position: absolute;
     font-size: 18px;
     line-height: 26px;
     white-space: normal;
-    text-overflow: ellipsis;
     word-wrap: break-word;
     overflow: hidden;
     margin: 0;
