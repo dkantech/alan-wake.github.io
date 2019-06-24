@@ -744,6 +744,13 @@ position: absolute;
 }
 
 @media (max-width: 768px){
+    #post-content{
+        position: relative;
+        margin: 0;
+        padding: 20px 14px 30px 14px;   
+        text-align: left;     
+    }    
+
 #tech-post-list .post-item{
         margin: 0 15px;
         padding: 20px 0 60px 0;
