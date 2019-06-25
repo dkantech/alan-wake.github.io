@@ -1,5 +1,5 @@
-title: DK A.N.T 기술 블로그
-email: alan1011@dkant.net
+title: DK A.N.T
+email: bearkim@dkant.net
 description: |
   AI, Network, Technology.
   
@@ -52,7 +52,7 @@ defaults:
 keep_files: [assets, files]
 github: [metadata]
 # iolo's custom
-author: alan1011@dkant.net
+author: bearkim@dkant.net
 image: '/assets/images/default_blog_cover.png'
 asset_url: /assets
 #asset_url: //meta-kage.kakaocdn.net/dn/osa/blog/assets
