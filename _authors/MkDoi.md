@@ -1,6 +1,6 @@
 ---
 layout: author
-name: mkdoi
+name: Mkdoi
 title: 문경동
-image: /files/authors/MkDoi.jpg
+image: /files/authors/Mkdoi.jpg
 ---
