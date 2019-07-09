@@ -1,4 +1,54 @@
-<article id="header">
+<article>
+
+  <header>
+      <div class="header-logo mbheader-logo" >
+          <a href="/"><img src="/assets/images/web_logo_red.png"></a>
+      </div> 
+      <nav class="navbar navbar-expand-md navbar-light" id="navBox">
+          <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>              
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item {% if page.url == '/business/' %} active {% endif %}">
+                      <a class="nav-link" href="{{ base_path }}/business/">BUSINESS</a>
+                    </li>
+                    <li class="nav-item {% if page.url != '/' && page.url != '/business' && page.url != '/contactus' %} active {% endif %}">
+                      <a class="nav-link" href="{{ base_path }}/technote/">TECH NOTE</a>
+                    </li>
+                    <li class="nav-item {% if page.url == '/contactus/' %} active {% endif %}">
+                      <a class="nav-link" href="{{ base_path }}/contactus/">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+          </div>       
+        </nav>
+        <form class="form-inline my-2 my-lg-0">
+            <ul class="search__results" id="results-container"></ul>
+            <div id="search">
+              <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search..." value="" />
+            </div>        
+        </form>
+  </header>
+
+  <section> 
+    <div class="banner-text">
+        <p class="bold">LEADING THE WAY FUTURE</p>
+        <h2>DK A.N.T</h2>
+        <p>사물과 사물, 사물과 사람, 사람과 사람 간을 연결하는 기술에 가치를 두며
+
+            이 기술을 통해 사회에 도움을 주며,우리 기술을 통해 고민했던 문제가 해결되어
+            
+            국가와 사회가 발전할 수 있도록 모든 구성원이 최선을 다하고 있습니다</p>
+        <div>
+            <a href="#"><span>BUSINESS 보러가기</span></a>
+            <a href="#"><span>TECH NOTE 보러가기</span></a>
+        </div>
+    </div>
+    <div class="banner-image"><img src="/assets/images/bannerImg.png"></div>
+  </section>
+  <!-- <header>
   <div class="header-logo">
     <span>
         <a href="/"><img src="/assets/images/web_logo.jpg"></a>
@@ -41,7 +91,7 @@
     </div>
   </div>       
 </nav>
-
+</header> -->
 
 </article>
 
