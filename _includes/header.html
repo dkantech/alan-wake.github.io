@@ -1,17 +1,20 @@
 <article>
 
   <header>
-      <div class="header-logo mbheader-logo" >
-          <a href="/"><img src="/assets/images/web_logo_red.png"></a>
-      </div> 
-      <nav class="navbar navbar-expand-md navbar-light" id="navBox">
-          <div class="container">
+    <!-- pc header -->
+    <div class="container-fluid header-container d-none d-sm-none d-md-block">
+      <div class="row">
+        <div class="col-auto header-logo">
+            <a href="/"><img src="/assets/images/web_logo_red.png"></a>
+        </div> 
+        <div class="col">
+          <nav class="navbar navbar-expand-md navbar-dark" id="navBox">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>              
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item {% if page.url == '/business/' %} active {% endif %}">
+                    <li class="nav-item active {% if page.url == '/business/' %} active {% endif %}">
                       <a class="nav-link" href="{{ base_path }}/business/">BUSINESS</a>
                     </li>
                     <li class="nav-item {% if page.url != '/' && page.url != '/business' && page.url != '/contactus' %} active {% endif %}">
@@ -21,18 +24,62 @@
                       <a class="nav-link" href="{{ base_path }}/contactus/">CONTACT US</a>
                     </li>
                 </ul>
-            </div>
-          </div>       
-        </nav>
-        <form class="form-inline my-2 my-lg-0">
+            </div>          
+          </nav>
+        </div>
+        <div class="col-3">
+         <form class="form-inline">
             <ul class="search__results" id="results-container"></ul>
             <div id="search">
               <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search..." value="" />
             </div>        
-        </form>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- mobile header -->
+    <div class="container-fluid header-container d-sm-block d-md-none">
+      <!-- <div class="row">
+        <div class="col-12 text-center mobile-header-wrap"> -->
+          <nav class="navbar navbar-expand-md navbar-dark mobile-header-menu" id="navBox">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <span class="header-logo">
+                <a href="https://dkant.net"><img src="/assets/images/web_logo_red.png"></a>
+              </span>
+              <span>
+                <a  style="color:#fff" data-toggle="collapse" href="#searchCollapse" role="button" aria-expanded="false" aria-controls="searchCollapse">검색아이콘 넣어~</a>
+                <div class="collapse" id="searchCollapse">
+                    <ul class="search__results" id="results-container-mobile"></ul>
+                    <div id="search">
+                      <input id="search-input-mobile" class="form-control mr-sm-2" type="search" placeholder="Search..." value="" />
+                    </div>   
+                </div>
+              </span>              
+              <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active {% if page.url == '/business/' %} active {% endif %}">
+                        <a class="nav-link" href="{{ base_path }}/business/">BUSINESS</a>
+                      </li>
+                      <li class="nav-item {% if page.url != '/' && page.url != '/business' && page.url != '/contactus' %} active {% endif %}">
+                        <a class="nav-link" href="{{ base_path }}/technote/">TECH NOTE</a>
+                      </li>
+                      <li class="nav-item {% if page.url == '/contactus/' %} active {% endif %}">
+                        <a class="nav-link" href="{{ base_path }}/contactus/">CONTACT US</a>
+                      </li>
+                  </ul>
+              <!-- </div>          
+            </nav> -->
+            
+        </div>
+        
+      </div>
+    </div>
   </header>
 
   <section> 
+    <!-- 텍스트 혹은 오브젝트 중앙 정렬에 대해 다시 만들것. 모바일 레이아웃에서 삐져나감 -->
     <div class="banner-text">
         <p class="bold">LEADING THE WAY FUTURE</p>
         <h2>DK A.N.T</h2>
@@ -102,6 +149,17 @@
     SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search2.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: '<li>No results found</li>',
+        limit: 15,
+        fuzzy: false,
+        exclude: ['Welcome']
+    })
+
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input-mobile'),
+        resultsContainer: document.getElementById('results-container-mobile'),
         json: '{{ site.baseurl }}/search2.json',
         searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
         noResultsText: '<li>No results found</li>',
