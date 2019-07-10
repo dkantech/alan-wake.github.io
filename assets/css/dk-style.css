@@ -256,6 +256,10 @@ section{
 
 
 /* index - bottomItem*/
+.post-wrap{
+    background-color: #f6f6fe;
+    height: 100%;
+}
 #post-list:after {
     display:block;
     clear:both;
