@@ -115,18 +115,19 @@ layout: home
 </div>
 </div> -->
 
+<div class="post-wrap">
+    <ul id="post-list">
+            <div class="post-text">
+                    <h2><span>Tech</span> Blog Post</h2>
+                    <span></span>
+                    <p>DK A.N.T의 유익한 정보가 담긴 글들을 소개합니다.</p>
+                </div>
 
-<ul id="post-list">
-        <div class="post-text">
-                <h2><span>Tech</span> Blog Post</h2>
-                <span></span>
-                <p>DK A.N.T의 유익한 정보가 담긴 글들을 소개합니다.</p>
-            </div>
-
-        {% for post in site.posts limit:4 %}
-            {% include item.html %}
-        {% endfor %}
-</ul>
-<div class="more-btn">
-        <a href="#">More Read</a> 
+            {% for post in site.posts limit:4 %}
+                {% include item.html %}
+            {% endfor %}
+    </ul>
+    <div class="more-btn">
+            <a href="#">More Read</a> 
+    </div>
 </div>

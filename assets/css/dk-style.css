@@ -301,6 +301,10 @@ section .banner-text2 h2 + p{
 
 
 /* index - bottomItem*/
+.post-wrap{
+    background-color: #f6f6fe;
+    height: 100%;
+}
 #post-list:after {
     display:block;
     clear:both;
