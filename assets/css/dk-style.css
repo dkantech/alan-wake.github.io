@@ -288,7 +288,7 @@ section .banner-text h2 + p{
 }
 
 
-/* dvantage */
+/* advantage */
 .advantage-wrap{
     width: 100%;
     height: 500px;
@@ -381,6 +381,8 @@ section .banner-text h2 + p{
     height: 100%;
     background-color: #fff;
     box-shadow: 5px 4px 6px 0px #eeeeee;
+    display: flex;
+    flex-direction: column
 }
 .post-text{
     text-align: center;
@@ -398,8 +400,6 @@ section .banner-text h2 + p{
 .post-text > h2 > span{
     color:#da4859
 }
-
-
 #post-list .inbox .author-name,
 #post-list .inbox .post-date,
 #post-list .inbox .post-title {
@@ -409,8 +409,8 @@ section .banner-text h2 + p{
 }
 #post-list .post-item .inbox  > div.post-title {
     background-color: #295b86;
-    padding: 5px 12px;
-    height: 70px;
+    padding: 9px 12px;
+    height: 75px;
     margin: 0;
     text-align: center;
     justify-content: center;
@@ -446,14 +446,17 @@ section .banner-text h2 + p{
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    display: flex;
+    flex: 1;
 }
 #post-list .inbox .post-tags {
-    padding: 30px 20px;
+    padding: 0 20px;
     margin: 0;
     height: 60px;
 }
 .post-meta{
-   padding: 13px;
+   padding: 0 10px;
+   height: 80px;
 }
 .post-meta::after{
     clear: both;
@@ -606,34 +609,37 @@ a.tag {
         height: 265px;
         position: relative;
     }
-    #post-list .post-title {
+    #post-list .inbox .post-title {
         font-size: 20px;
+        height: 50px !important;
     }
-    #post-list .post-excerpt{
+    #post-list .inbox .post-excerpt{
         padding: 0 20px;
-        color: #595959;        
-    }
-    #post-list .post-tags {
-        margin: 5px 20px;
-    }
-    #post-list .author-image{
-        width: 35px;
-        height: 35px;
-        margin: 0;
-        float: left;
-    }
-    #post-list .author-name{
-        float: left;
-    }
-    #post-list .post-date{
-        float: right;
+        color: #595959;   
+        margin: 17px 20px; 
+            
     }
     .post-meta {
         width: 100% !important;
-        bottom: 15px !important;
-        left: 20px !important;
-        margin-left: 0 !important;
+        bottom: 0;
+        height: 55px;
     }
+    .post-meta .author-image{
+        margin: 0;
+        height: 50px !important;
+        width: 50px !important;
+    }
+    #post-list .author-name{
+        margin: 0
+    }
+    .post-meta .post-date{
+        float: right;
+    }
+    #post-list .inbox .post-tags {
+        height: 35px;
+    }
+
+
 }
 
 
@@ -657,7 +663,7 @@ a.tag {
     }
 
     .advantage-wrap ul li{
-        display: block !important;
+
         width: 100% !important;
         background-color:#1c3d5c;
         height: 100px;
@@ -679,7 +685,18 @@ a.tag {
     .sm-view p{
         display: block
     }
-
+    .sm-view{
+        display: flex !important
+    }
+    .ad-image-wrap{
+        display: flex;
+        text-align: center;
+        margin: auto;
+    }
+    .ad-text-wrap{
+        flex: 1;
+        text-align: center;
+    }
 }
 
 
@@ -822,7 +839,6 @@ ol{
 #tech-post-list .post-title, 
 #tech-post-list .tech-post-excerpt{
     margin: 0px 160px 0 0;
-    max-width: 620px;
 }
 
 #tech-post-list:after {
@@ -834,9 +850,10 @@ ol{
   padding: 50px 0;
 }
 #tech-post-list .post-item{
+    max-width: 1240px;
     list-style: none;
     position: relative;
-    margin: 0 40px;
+    margin: auto;
     padding: 25px 0 25px 40px;
     border-bottom: 1px solid #e6e6e6;
 }
@@ -979,3 +996,104 @@ position: absolute;
     background: url(../images/icon_next.png) no-repeat center;
 }
 
+
+
+
+
+
+/* contact us */
+.dk-container ul{
+    padding-left: 0
+}
+.info{
+max-width: 1240px;
+padding: 70px 10px;
+margin: auto;
+}
+.info h4{
+    padding-left: 10px
+}
+.contact-right h4{
+    padding-bottom: 30px;
+}
+.contact-left,
+.contact-right{
+    float: left;
+    color:#021933
+}
+.contact-left{
+    width: 45%;
+}
+.contact-left ul li{
+    padding: 30px 0
+}
+.contact-left ul li i{
+    padding-right: 20px
+}
+
+.contact-right{
+    width: 55%;
+}
+.info:after{
+    content: "";
+    display: block;
+    clear: both
+}
+
+.sr-only {
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+border: 0;
+}
+
+.form-control-transparent {
+background: 0 0;
+border-color: transparent;
+color: #495057;
+}
+.form-control {
+display: block;
+width: 100%;
+padding: .375rem .75rem;
+font-size: 1rem;
+line-height: 1.5;
+color: #495057;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid #ced4da;
+border-radius: .25rem;
+}
+
+.btn-color{
+    background-color: #da4859;
+    color: #fff
+}
+
+@media (max-width: 768px){
+    .contact-left{
+        text-align: center;
+        width: 100%;
+        margin-bottom: 80px;
+    }
+     .contact-right{
+        margin: auto;
+        width: 90%;
+        float: none
+     }  
+     .info h4{
+         text-align: center
+     }
+     #contact-form .btn{
+        float: right
+     }
+     #contact-form :after{
+         clear: both;
+         content: "";
+         display: block
+     }
+}
