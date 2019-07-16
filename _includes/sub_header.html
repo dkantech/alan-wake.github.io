@@ -1,8 +1,92 @@
 <article id="subheader">
-  <div class="sub-header" {% if page.image %}style="background-image: url({{ page.image }});"{% else %} style="background-image: url({{ '/assets/images/vision.jpg' }});" {% endif %}>
-      <h1>{{ page.title }}</h1>      
-  </div>
-  <nav class="sub-navbar navbar-expand-md navbar-light" id="subNavBox">
+  <header>
+      <!-- pc header -->
+      <div class="container-fluid header-container d-none d-sm-none d-md-block">
+        <div class="row">
+          <div class="col-auto header-logo">
+            <a href="/"><img src="/assets/images/web_logo_red.png"></a>
+          </div>
+          <div class="col">
+            <nav class="navbar navbar-expand-md navbar-dark" id="navBox">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active {% if page.url == '/business/' %} active {% endif %}">
+                    <a class="nav-link" href="{{ base_path }}/business/">BUSINESS</a>
+                  </li>
+                  <li
+                    class="nav-item {% if page.url != '/' && page.url != '/business' && page.url != '/contactus' %} active {% endif %}">
+                    <a class="nav-link" href="{{ base_path }}/technote/">TECH NOTE</a>
+                  </li>
+                  <li class="nav-item {% if page.url == '/contactus/' %} active {% endif %}">
+                    <a class="nav-link" href="{{ base_path }}/contactus/">CONTACT US</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="col-3">
+            <form class="form-inline">
+              <ul class="search__results" id="results-container"></ul>
+              <div id="search">
+                <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search..." value="" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- mobile header -->
+      <div class="container-fluid header-container d-sm-block d-md-none">
+        <!-- <div class="row">
+          <div class="col-12 text-center mobile-header-wrap"> -->
+        <nav class="navbar navbar-expand-md navbar-dark mobile-header-menu" id="navBox">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <span class="header-logo">
+            <a href="https://dkant.net"><img src="/assets/images/web_logo_red.png"></a>
+          </span>
+          <span>
+            <a style="color:#fff" data-toggle="collapse" href="#searchCollapse" role="button" aria-expanded="false"
+              aria-controls="searchCollapse"><img src="/assets/images/searchIcon.png" class="searchIcon"></a>
+            <div class="collapse" id="searchCollapse">
+              <ul class="search__results" id="results-container-mobile"></ul>
+              <div id="search">
+                <input id="search-input-mobile" class="form-control mr-sm-2" type="search" placeholder="Search..."
+                  value="" />
+              </div>
+            </div>
+          </span>
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active {% if page.url == '/business/' %} active {% endif %}">
+                <a class="nav-link" href="{{ base_path }}/business/">BUSINESS</a>
+              </li>
+              <li
+                class="nav-item {% if page.url != '/' && page.url != '/business' && page.url != '/contactus' %} active {% endif %}">
+                <a class="nav-link" href="{{ base_path }}/technote/">TECH NOTE</a>
+              </li>
+              <li class="nav-item {% if page.url == '/contactus/' %} active {% endif %}">
+                <a class="nav-link" href="{{ base_path }}/contactus/">CONTACT US</a>
+              </li>
+            </ul>
+            <!-- </div>          
+              </nav> -->
+  
+          </div>
+  
+      </div>
+      </div>
+    </header>
+      <!-- <div class="sub-header" {% if page.image %}style="background-image: url({{ page.image }});"{% else %} style="background-image: url({{ '/assets/images/vision.jpg' }});" {% endif %}> -->
+        <div class="sub-header">  <h1>{{ page.title }}</h1>   </div> 
+         <div class="triangle-bottomleft"></div>
+      </div>
+  <!-- <nav class="sub-navbar navbar-expand-md navbar-light" id="subNavBox">
     <div class="container">
         <span class='mbnavbar-logo'>
             <a href="/"><img src="/assets/images/web_logo.jpg"></a>
@@ -42,7 +126,7 @@
 
       </div>
     </div>       
-  </nav>
+  </nav> -->
 </article>
 
 <!-- Script pointing to jekyll-search.js -->
