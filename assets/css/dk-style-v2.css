@@ -429,6 +429,7 @@ section .banner-text h2 + p{
     color: #001f42;
     font-weight: 600
 }
+
 a.tag {
     display: inline-block;
     margin: 0 4px 4px 0;
@@ -756,9 +757,80 @@ ol{
   max-width: 620px;
 }
 #post-content{
-    padding: 20px 0;
+    position: relative;
+    margin: 0 20px;
+    padding: 30px 30px 50px 30px; 
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 16px;
+    line-height: 28px; /* 28px = 16(font-size) + 12(line-spacing) */
+    text-align: justify;
 }
 
+#post-content h1 {
+    margin: 70px 0 30px 0;
+    font-size: 26px;
+}
+
+/* @@iolo */
+#post-content h2 {
+    margin: 50px 0 30px 0;
+    font-size: 22px;
+}
+
+#post-content h3 {
+    margin: 40px 0 30px 0;
+    font-size: 18px;
+}
+
+/* @@iolo */
+#post-content h4 {
+    margin: 36px 0 30px 0;
+    font-size: 17px;
+}
+
+/* @@iolo */
+#post-content h5 {
+    margin: 34px 0 30px 0;
+    font-size: 16px;
+}
+
+/* @@iolo */
+#post-content h6 {
+    margin: 32px 0 30px 0;
+    font-size: 15px;
+}
+
+/* @@iolo */
+#post-content h6 {
+    margin: 35px 0 30px 0;
+    font-size: 15px;
+}
+
+#post-content p {
+    margin: 28px 0 0 0;
+}
+
+#post-content ul,
+#post-content ol {
+    padding-left: 28px;
+}
+#post-content img {
+    max-width: 100%;
+    border: 1px solid #e6e6e6;
+    cursor: pointer;
+}
+
+#post-content p {
+    margin: 20px 0 0 0;
+}
+
+#post-content a {
+    color: #0056b3;
+}
+
+#post-content div.highlight {
+    padding: 14px 16px 4px 16px;
+}
 
 #tech-post-list .tech-post-meta{
 position: absolute;
