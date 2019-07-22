@@ -8,8 +8,14 @@ ul li{
 #wrapper {
     padding-bottom: 100px;
 }
-
-
+body{
+    min-height: 100vh;
+    position: relative;
+}
+main{
+    position: relative;
+    padding-bottom: 126px
+}
 /* * * * * * * header * * * * * * */
 article{ 
   width: 100%;
@@ -308,6 +314,11 @@ section .banner-text h2 + p{
     background-color: #f6f6fe;
     padding: 10px;
 }
+#post-list .post-item:after{
+    clear: both;
+    content: "";
+    display: block
+}
 .inbox{
     height: 100%;
     background-color: #fff;
@@ -392,6 +403,11 @@ section .banner-text h2 + p{
 }
 .post-meta > div{
     float: right;
+}
+.post-meta  > div:after{
+    clear: both;
+    content: "";
+    display: block
 }
 .post-meta > div a{
     font-weight: 600
@@ -583,12 +599,12 @@ a.tag {
 
 /* footer */
 #footer {
-    height: 100% !important;
     padding: 20px 30px;
-    border-top: 1px solid #d4d4d4;
     background-color: #00223e !important;
     text-align: center;
     font-size: 13px;
+    position: absolute;
+    bottom: 0;
 }
 
 #footer a,
@@ -657,9 +673,6 @@ a.tag {
 #post-prev h3,
 #post-next h3{
     font-size: 20px
-}
-main{
-    position: relative;
 }
  #back-to-top{
     width: 40px;
