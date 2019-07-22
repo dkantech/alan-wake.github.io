@@ -1103,4 +1103,15 @@ border-radius: .25rem;
     }
     .sub-header h1{
         font-size: 23px;
+    }
+}
+
+/** business page **/
+#business-content-wrap {
+  width:1240px;
+  padding: 10px;
+}
+
+#business-navs {
+  justify-content: center;
 }
