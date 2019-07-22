@@ -1,50 +1,42 @@
 ---
 layout: default
 ---
-<div id="content" class="container">
-  <div id="post-content" class="post page" role="main">    
-    <div class="about-text-wrap">
+
+<div id="content" class="container">    
+   
        
       <!-- Nav tabs -->
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <ul id="business-navs" class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link active" id="business-tab-1" data-toggle="tab" href="#business1" role="tab" aria-controls="home" aria-selected="true">Home</a>
+          <a class="nav-link {% if page.url contains '/business/fclt/' %} active {% endif %}" id="business-tab-1"  href="{{ base_path }}/business/fclt/">
+            스마트 유지관리 플랫폼</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="business-tab-2" data-toggle="tab" href="#business2" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+          <a class="nav-link {% if page.url contains '/business/ipes/' %} active {% endif %}" id="business-tab-2"  href="{{ base_path }}/business/ipes/" >
+            불법주정차 무인단속시스템</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="business-tab-3" data-toggle="tab" href="#business3" role="tab" aria-controls="messages" aria-selected="false">Messages</a>
+          <a class="nav-link {% if page.url contains '/business/traffic/' %} active {% endif %}" id="business-tab-3"  href="{{ base_path }}/business/traffic/" >
+            지능형 교통관리 소프트웨어</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="business-tab-4" data-toggle="tab" href="#business4" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
+          <a class="nav-link {% if page.url contains '/business/smartcity/' %} active {% endif %}" id="business-tab-4"  href="{{ base_path }}/business/smartcity/" >
+            스마트시티 플랫폼</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/business/cctv/' %} active {% endif %}" id="business-tab-5"  href="{{ base_path }}/business/cctv/" >
+            CCTV 통합관제 플랫폼</a>
         </li>
       </ul>
-  
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="business-tab-1">
-          내용
-        </div>
-        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="business-tab-2">
-          
-        </div>
-        
-        <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="business-tab-3">
-
-        </div>
-        
-        <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="business-tab-4">
-
-        </div>
+      <div id="business-content-wrap">
+          {{ content }}
       </div>
-    </div>
-  </div>
+  
 </div>
 
 <script>
 $(function() {
-  var aa = 1;
+  var aa = "{{site.url}}";
 
   $('#myTab a[href="#profile"]').tab('show')
 })
