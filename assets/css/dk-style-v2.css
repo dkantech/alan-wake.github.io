@@ -1128,3 +1128,9 @@ border-radius: .25rem;
 #business-navs {
   justify-content: center;
 }
+.nav-tabs .nav-item {
+    padding: 0 24px;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: -1px;
+    color: #001f43;
