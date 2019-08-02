@@ -1,0 +1,113 @@
+<article id="busiheader">
+    <header>
+        <!-- pc header -->
+        <div class="container-fluid header-container d-none d-sm-none d-md-block">
+          <div class="row">
+            <div class="col-auto header-logo">
+              <a href="/"><img src="/assets/images/web_logo_red.png"></a>
+            </div>
+            <div class="col">
+              <nav class="navbar navbar-expand-md navbar-dark" id="navBox">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                  aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item {% if page.url contains '/business/' %} active {% endif %}">
+                      <a class="nav-link" href="{{ base_path }}/business/fclt/">BUSINESS</a>
+                    </li>
+                    <li
+                      class="nav-item {% if page.url contains '/business/' %} {% elsif page.url contains '/contactus/' %} {% else %} active {% endif %}">
+                      <a class="nav-link" href="{{ base_path }}/technote/">TECH NOTE</a>
+                    </li>
+                    <li class="nav-item {% if page.url contains '/contactus/' %} active {% endif %}">
+                      <a class="nav-link" href="{{ base_path }}/contactus/">CONTACT US</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            <div class="col-3">
+              <form class="form-inline">
+                <ul class="search__results" id="results-container"></ul>
+                <div id="search">
+                  <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search..." value="" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- mobile header -->
+        <div class="container-fluid header-container d-sm-block d-md-none">
+          <!-- <div class="row">
+            <div class="col-12 text-center mobile-header-wrap"> -->
+          <nav class="navbar navbar-expand-md navbar-dark mobile-header-menu" id="navBox">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+              aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <span class="header-logo">
+              <a href="/"><img src="/assets/images/web_logo_red.png"></a>
+            </span>
+            <span>
+              <a style="color:#fff" data-toggle="collapse" href="#searchCollapse" role="button" aria-expanded="false"
+                aria-controls="searchCollapse"><img src="/assets/images/searchIcon.png" class="searchIcon"></a>
+              <div class="collapse" id="searchCollapse">
+                <ul class="search__results" id="results-container-mobile"></ul>
+                <div id="search">
+                  <input id="search-input-mobile" class="form-control mr-sm-2" type="search" placeholder="Search..."
+                    value="" />
+                </div>
+              </div>
+            </span>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item {% if page.url contains '/business/' %} active {% endif %}">
+                    <a class="nav-link" href="{{ base_path }}/business/fclt/">BUSINESS</a>
+                  </li>
+                  <li
+                    class="nav-item {% if page.url contains '/business/' %} {% elsif page.url contains '/contactus/' %} {% else %} active {% endif %}">
+                    <a class="nav-link" href="{{ base_path }}/technote/">TECH NOTE</a>
+                  </li>
+                  <li class="nav-item {% if page.url contains '/contactus/' %} active {% endif %}">
+                    <a class="nav-link" href="{{ base_path }}/contactus/">CONTACT US</a>
+                  </li>
+              </ul>
+              <!-- </div>          
+                </nav> -->
+    
+            </div>
+    
+        </div>
+        </div>
+      </header>
+        <!-- <div class="sub-header" {% if page.image %}style="background-image: url({{ page.image }});"{% else %} style="background-image: url({{ '/assets/images/vision.jpg' }});" {% endif %}> -->
+          <div class="busi-header"> 
+              <img src="/assets/images/cctvban.png" style="width: 100%"> 
+              <h1>{{ page.title }}</h1>   
+            </div> 
+
+        </div>
+        <div style="color:#fff">
+    
+            
+          </div>
+  </article>
+  
+  <!-- Script pointing to jekyll-search.js -->
+  <script src="{{site.baseurl}}/dest/jekyll-search.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+      SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '{{ site.baseurl }}/search2.json',
+          searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+          noResultsText: '<li>No results found</li>',
+          limit: 15,
+          fuzzy: false,
+          exclude: ['Welcome']
+      })
+  </script><!-- #header -->
+  

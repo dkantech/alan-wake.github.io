@@ -16,6 +16,9 @@ main{
     position: relative;
     padding-bottom: 126px
 }
+a:hover {
+    text-decoration: none !important
+  }
 /* * * * * * * header * * * * * * */
 article{ 
   width: 100%;
@@ -181,7 +184,17 @@ section .banner-text h2 + p{
         width: 300px;
     }
 }
-
+/* * * * * * *  business header * * * * * * */
+.busi-header{
+    height: 100%;
+}
+.busi-header h1{
+    position: absolute;
+    left: 15%;
+    top: 27%;
+    color: #fff;
+    text-align: center;
+}
 
 /* * * * * * *  business * * * * * * */
 .business-wrap{
@@ -372,15 +385,17 @@ section .banner-text h2 + p{
 }
 #post-list .post-excerpt{
     word-break: break-all;
-    margin: 30px 20px 20px 20px;
     font-size: 14px;
     line-height: 24px;
     text-overflow: ellipsis;
     word-wrap: break-word;
-    overflow: hidden;    
+    margin: 30px 20px 20px 20px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    overflow: hidden; 
+}
+#post-excerpt-size{
     display: flex;
     flex: 1;
 }
