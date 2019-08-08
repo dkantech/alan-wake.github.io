@@ -826,8 +826,7 @@ ol{
 }
 #post-content{
     position: relative;
-    margin: 0 20px;
-    padding: 30px 30px 50px 30px; 
+    padding: 30px 0 50px 0; 
     border-bottom: 1px solid #e6e6e6;
     font-size: 16px;
     line-height: 28px; /* 28px = 16(font-size) + 12(line-spacing) */
@@ -853,7 +852,7 @@ ol{
 /* @@iolo */
 #post-content h4 {
     margin: 36px 0 30px 0;
-    font-size: 17px;
+    font-size: 25px;
 }
 
 /* @@iolo */
@@ -880,7 +879,7 @@ ol{
 
 #post-content ul,
 #post-content ol {
-    padding-left: 28px;
+    /* padding-left: 28px; */
 }
 #post-content img {
     max-width: 100%;
@@ -1040,7 +1039,7 @@ position: absolute;
 }
 .info{
 max-width: 1240px;
-padding: 70px 10px;
+padding: 70px 25px;
 margin: auto;
 }
 .info h4{
@@ -1056,6 +1055,7 @@ margin: auto;
 }
 .contact-left{
     width: 45%;
+    padding-right: 10px
 }
 .contact-left ul li{
     padding: 30px 0
@@ -1065,6 +1065,7 @@ margin: auto;
 }
 
 .contact-right{
+    padding-left: 10px;
     width: 55%;
 }
 .info:after{
