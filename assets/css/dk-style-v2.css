@@ -189,9 +189,18 @@ section .banner-text h2 + p{
     }
 }
 /* * * * * * *  business header * * * * * * */
+.business-template{
+    overflow: hidden
+}
 .busi-header{
     height: 450px !important;
     width: 100%;
+    background-size: cover
+}
+.busi-header:after{
+    clear: both;
+    display: block;
+    content: ''
 }
 .busi-text{
     float: left;
