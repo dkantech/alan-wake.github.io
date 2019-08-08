@@ -79,10 +79,13 @@ header:after{
 
 
 /* * * * * * * sub page header * * * * * * */
-.sub-header{
-    background-color: #00223e;
-    height: 100px;
+.sub-header-wrap{
     position: relative;
+    height: 170px;
+    background-color: #00223e;
+}
+.sub-header{
+    height: 100px;
 }
 .sub-header h1{
     position: absolute;
@@ -99,6 +102,7 @@ header:after{
     border-width: 70px 0 0 70px;
     border-color: transparent transparent transparent #da4859;
 }
+
 
 
 /* * * * * * * section * * * * * * */
@@ -186,14 +190,53 @@ section .banner-text h2 + p{
 }
 /* * * * * * *  business header * * * * * * */
 .busi-header{
-    height: 100%;
+    height: 450px !important;
+    width: 100%;
 }
-.busi-header h1{
+.busi-text{
+    float: left;
+    width: 50%;
     position: absolute;
-    left: 15%;
-    top: 27%;
+    left: 0;
+    top: 28%;
     color: #fff;
     text-align: center;
+}
+.busi-img{
+    float: right;
+    width: 50%;
+    padding: 2% 1% 0 7% !important;
+}
+.cctvback{
+    background-image: url(../images/cctvban.png)
+}
+.fcltback{
+    background-image: url(../images/smartcity.png)
+}
+.ipesback{
+    background-image: url(../images/parking.png)
+}
+.smartcity{
+    background-image: url(../images/smart.png)
+}
+.trafficback{
+    background-image: url(../images/traffic.png)
+}
+@media (max-width:1100px) {
+    /* * * * * * * busi-banner 1100px * * * * * * */
+    .busi-img{
+        display: none
+    }
+    .busi-header{
+        height: 300px !important;
+    }
+    .busi-header .busi-text{
+        width: 100%;
+        padding-top: 110px;
+        right: 0;
+        left: 0;
+        top: auto
+    }
 }
 
 /* * * * * * *  business * * * * * * */
