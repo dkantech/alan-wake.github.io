@@ -145,7 +145,7 @@ section .banner-text h2{
 }
 section .banner-text a{
     background-color: #da4859;
-    color:#fff;
+    color:#fff !important;
     font-size: 12px;
     padding: 10px;
     border-radius: 3px;
@@ -190,7 +190,7 @@ section .banner-text h2 + p{
 }
 /* * * * * * *  business header * * * * * * */
 .business-template{
-    overflow: hidden
+    /* overflow: hidden */
 }
 .busi-header{
     height: 450px !important;
@@ -504,7 +504,7 @@ section .banner-text h2 + p{
 }
 .more-btn a{
     display: block;
-    color: #fff;
+    color: #fff !important;
     text-decoration: none;
 }
 .more-btn a:hover{
@@ -1202,3 +1202,24 @@ border-radius: .25rem;
     font-size: 13px;
     margin-bottom: -1px;
     color: #001f43;
+}
+
+
+
+/** tab **/
+    .nav-tabs{
+    border-bottom: none !important
+}   
+.nav-link{
+    color: #9c9c9c !important
+} 
+.nav-link.active{
+    border: none !important;
+    border-bottom: 2px solid #00223e !important;
+    color:#00223e !important;
+}
+.nav-tabs .nav-link:hover{
+    border-color:#fff;
+    color:#00223e !important;
+    font-weight: 600
+}
