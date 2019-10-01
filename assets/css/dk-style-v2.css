@@ -14,11 +14,13 @@ body{
 }
 main{
     position: relative;
-    padding-bottom: 126px
 }
 a:hover {
     text-decoration: none !important
   }
+.w100{
+    width: 100%;
+}
 /* * * * * * * header * * * * * * */
 article{ 
   width: 100%;
@@ -193,6 +195,7 @@ section .banner-text h2 + p{
     /* overflow: hidden */
 }
 .busi-header{
+    position: relative;
     height: 450px !important;
     width: 100%;
     background-size: cover
@@ -207,7 +210,7 @@ section .banner-text h2 + p{
     width: 50%;
     position: absolute;
     left: 0;
-    top: 28%;
+    top: 40%;
     color: #fff;
     text-align: center;
 }
@@ -215,6 +218,9 @@ section .banner-text h2 + p{
     float: right;
     width: 50%;
     padding: 2% 1% 0 7% !important;
+}
+.busi-img img{
+    max-width: 100%;
 }
 .cctvback{
     background-image: url(../images/cctvban.png)
@@ -285,6 +291,7 @@ section .banner-text h2 + p{
     margin: 15px 0 50px 0;
     color: #00223e;
 }
+
 
 
 /* * * * * * * * advantage * * * * * * * */
@@ -359,7 +366,7 @@ section .banner-text h2 + p{
 /* * * * * * * * index - post* * * * * * * */
 .post-wrap{
     background-color: #f6f6fe;
-    height: 100%;
+    padding-bottom: 50px;
 }
 #post-list:after {
     display:block;
@@ -499,7 +506,7 @@ section .banner-text h2 + p{
 .more-btn {
     background-color: #3470a8;
     width: 150px;
-    margin: 0 auto 90px auto;
+    margin:auto;
     text-align: center;
 }
 .more-btn a{
@@ -670,7 +677,7 @@ a.tag {
     background-color: #00223e !important;
     text-align: center;
     font-size: 13px;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
@@ -1189,8 +1196,9 @@ border-radius: .25rem;
 
 /** business page **/
 #business-content-wrap {
-  width:1240px;
+  max-width:1240px;
   padding: 10px;
+  margin: 80px 0;
 }
 
 #business-navs {
@@ -1203,6 +1211,104 @@ border-radius: .25rem;
     margin-bottom: -1px;
     color: #001f43;
 }
+@media (max-width: 768px){
+    .nav-tabs .nav-item{
+        width: 100%;
+        text-align: center;
+    }
+    .nav-link.active{
+        width: 50%;
+        margin: auto
+    }
+}
+
+
+.business-intro{
+    margin-bottom: 70px;   
+}
+.business-intro h2{
+    color:#da4859;
+    font-weight: bold
+}
+.business-intro span{
+    border-bottom: 2px solid #00223e;
+    width: 70px;
+    margin: 30px 5px;
+    display: block
+}
+.fclt-content{
+    display: flex;
+    justify-content:space-around
+}
+.business-intro p{
+    color: #08213b
+}
+
+@media (max-width: 916px){
+    .fclt-content{
+        flex-direction: column
+    }
+}
+.fclt-content div{
+    margin: auto
+}
+.ipes-content,
+.traffic-content{
+    display: flex;
+    margin: 70px 0
+}
+.ipes-content div h5,
+.traffic-content div h5{
+    font-weight: bold
+}
+.ipes-content div p,
+.traffic-content div p{
+    color: #595e63
+}
+.img-fr img{
+    float: right
+}
+.img-fr:after{
+    clear: both;
+    display: block;
+    content: ""
+}
+.img-box{
+    width: 45%;
+}
+.text-box{
+    width: 55%;
+    margin: 0 10px
+}
+.img-box img{
+    width: 100%;
+}
+.mb-text{
+    display: none
+}
+@media (max-width: 768px){
+    .ipes-content,
+    .traffic-content{
+        display: block
+    }    
+    .img-box{
+        width: 100%;
+    }
+    .text-box{
+        width: 100%;
+    }
+    .text-box h5{
+        text-align: center;
+        margin: 30px 0 
+    }
+    .pc-text{
+        display: none
+    }
+    .mb-text{
+        display: block !important;
+    }
+}
+
 
 
 
