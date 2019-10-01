@@ -1132,7 +1132,7 @@ border-radius: .25rem;
     }
      .contact-right{
         margin: auto;
-        width: 90%;
+        width: 100%;
         float: none
      }  
      .info h4{
@@ -1187,7 +1187,7 @@ border-radius: .25rem;
         margin-top: 5px;
     }
     #content{
-        padding: 15px
+   
     }
     .sub-header h1{
         font-size: 23px;
