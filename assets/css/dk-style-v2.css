@@ -18,8 +18,15 @@ main{
 }
 a:hover {
     text-decoration: none !important
-  }
-/* * * * * * * header * * * * * * */
+}
+
+.shadow {
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(143,143,143,1);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(143,143,143,1);
+  box-shadow: 1px 1px 5px 0px rgba(143,143,143,1);
+}
+
+  /* * * * * * * header * * * * * * */
 article{ 
   width: 100%;
   background-color: #00223e
@@ -1149,3 +1156,6 @@ border-radius: .25rem;
     font-size: 13px;
     margin-bottom: -1px;
     color: #001f43;
+}
+
+
