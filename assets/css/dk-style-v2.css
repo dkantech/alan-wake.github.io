@@ -14,7 +14,6 @@ body{
 }
 main{
     position: relative;
-    padding-bottom: 126px
 }
 a:hover {
     text-decoration: none !important
@@ -86,10 +85,13 @@ header:after{
 
 
 /* * * * * * * sub page header * * * * * * */
-.sub-header{
-    background-color: #00223e;
-    height: 100px;
+.sub-header-wrap{
     position: relative;
+    height: 170px;
+    background-color: #00223e;
+}
+.sub-header{
+    height: 100px;
 }
 .sub-header h1{
     position: absolute;
@@ -106,6 +108,7 @@ header:after{
     border-width: 70px 0 0 70px;
     border-color: transparent transparent transparent #da4859;
 }
+
 
 
 /* * * * * * * section * * * * * * */
@@ -148,7 +151,7 @@ section .banner-text h2{
 }
 section .banner-text a{
     background-color: #da4859;
-    color:#fff;
+    color:#fff !important;
     font-size: 12px;
     padding: 10px;
     border-radius: 3px;
@@ -192,15 +195,67 @@ section .banner-text h2 + p{
     }
 }
 /* * * * * * *  business header * * * * * * */
-.busi-header{
-    height: 100%;
+.business-template{
+    /* overflow: hidden */
 }
-.busi-header h1{
+.busi-header{
+    position: relative;
+    height: 450px !important;
+    width: 100%;
+    background-size: cover
+}
+.busi-header:after{
+    clear: both;
+    display: block;
+    content: ''
+}
+.busi-text{
+    float: left;
+    width: 50%;
     position: absolute;
-    left: 15%;
-    top: 27%;
+    left: 0;
+    top: 40%;
     color: #fff;
     text-align: center;
+}
+.busi-img{
+    float: right;
+    width: 50%;
+    padding: 2% 1% 0 7% !important;
+}
+.busi-img img{
+    max-width: 100%;
+}
+.cctvback{
+    background-image: url(../images/cctvban.png)
+}
+.fcltback{
+    background-image: url(../images/smartcity.png)
+}
+.ipesback{
+    background-image: url(../images/parking.png)
+}
+.smartcity{
+    background-image: url(../images/smart.png)
+}
+.trafficback{
+    background-image: url(../images/traffic.png)
+}
+@media (max-width:1100px) {
+    /* * * * * * * busi-banner 1100px * * * * * * */
+    .busi-img{
+        display: none
+    }
+    .busi-header{
+        height: 300px !important;
+    }
+    .busi-header .busi-text{
+        width: 100%;
+        padding-top: 110px;
+        right: 0;
+        left: 0;
+        top: auto
+    }
 }
 
 /* * * * * * *  business * * * * * * */
@@ -240,6 +295,7 @@ section .banner-text h2 + p{
     margin: 15px 0 50px 0;
     color: #00223e;
 }
+
 
 
 /* * * * * * * * advantage * * * * * * * */
@@ -314,7 +370,7 @@ section .banner-text h2 + p{
 /* * * * * * * * index - post* * * * * * * */
 .post-wrap{
     background-color: #f6f6fe;
-    height: 100%;
+    padding-bottom: 50px;
 }
 #post-list:after {
     display:block;
@@ -454,12 +510,12 @@ section .banner-text h2 + p{
 .more-btn {
     background-color: #3470a8;
     width: 150px;
-    margin: 0 auto 90px auto;
+    margin:auto;
     text-align: center;
 }
 .more-btn a{
     display: block;
-    color: #fff;
+    color: #fff !important;
     text-decoration: none;
 }
 .more-btn a:hover{
@@ -625,7 +681,7 @@ a.tag {
     background-color: #00223e !important;
     text-align: center;
     font-size: 13px;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
@@ -790,8 +846,7 @@ ol{
 }
 #post-content{
     position: relative;
-    margin: 0 20px;
-    padding: 30px 30px 50px 30px; 
+    padding: 30px 0 50px 0; 
     border-bottom: 1px solid #e6e6e6;
     font-size: 16px;
     line-height: 28px; /* 28px = 16(font-size) + 12(line-spacing) */
@@ -817,7 +872,7 @@ ol{
 /* @@iolo */
 #post-content h4 {
     margin: 36px 0 30px 0;
-    font-size: 17px;
+    font-size: 25px;
 }
 
 /* @@iolo */
@@ -844,7 +899,7 @@ ol{
 
 #post-content ul,
 #post-content ol {
-    padding-left: 28px;
+    /* padding-left: 28px; */
 }
 #post-content img {
     max-width: 100%;
@@ -1004,7 +1059,7 @@ position: absolute;
 }
 .info{
 max-width: 1240px;
-padding: 70px 10px;
+padding: 70px 25px;
 margin: auto;
 }
 .info h4{
@@ -1020,6 +1075,7 @@ margin: auto;
 }
 .contact-left{
     width: 45%;
+    padding-right: 10px
 }
 .contact-left ul li{
     padding: 30px 0
@@ -1029,6 +1085,7 @@ margin: auto;
 }
 
 .contact-right{
+    padding-left: 10px;
     width: 55%;
 }
 .info:after{
@@ -1079,7 +1136,7 @@ border-radius: .25rem;
     }
      .contact-right{
         margin: auto;
-        width: 90%;
+        width: 100%;
         float: none
      }  
      .info h4{
@@ -1134,7 +1191,7 @@ border-radius: .25rem;
         margin-top: 5px;
     }
     #content{
-        padding: 15px
+   
     }
     .sub-header h1{
         font-size: 23px;
@@ -1143,8 +1200,9 @@ border-radius: .25rem;
 
 /** business page **/
 #business-content-wrap {
-  width:1240px;
+  max-width:1240px;
   padding: 10px;
+  margin: 80px 0;
 }
 
 #business-navs {
@@ -1157,5 +1215,126 @@ border-radius: .25rem;
     margin-bottom: -1px;
     color: #001f43;
 }
+<<<<<<< HEAD
 
 
+=======
+@media (max-width: 768px){
+    .nav-tabs .nav-item{
+        width: 100%;
+        text-align: center;
+    }
+    .nav-link.active{
+        width: 50%;
+        margin: auto
+    }
+}
+
+
+.business-intro{
+    margin-bottom: 70px;   
+}
+.business-intro h2{
+    color:#da4859;
+    font-weight: bold
+}
+.business-intro span{
+    border-bottom: 2px solid #00223e;
+    width: 70px;
+    margin: 30px 5px;
+    display: block
+}
+.fclt-content{
+    display: flex;
+    justify-content:space-around
+}
+.business-intro p{
+    color: #08213b
+}
+
+@media (max-width: 916px){
+    .fclt-content{
+        flex-direction: column
+    }
+}
+.fclt-content div{
+    margin: auto
+}
+.ipes-content,
+.traffic-content{
+    display: flex;
+    margin: 70px 0
+}
+.ipes-content div h5,
+.traffic-content div h5{
+    font-weight: bold
+}
+.ipes-content div p,
+.traffic-content div p{
+    color: #595e63
+}
+.img-fr img{
+    float: right
+}
+.img-fr:after{
+    clear: both;
+    display: block;
+    content: ""
+}
+.img-box{
+    width: 45%;
+}
+.text-box{
+    width: 55%;
+    margin: 0 10px
+}
+.img-box img{
+    width: 100%;
+}
+.mb-text{
+    display: none
+}
+@media (max-width: 768px){
+    .ipes-content,
+    .traffic-content{
+        display: block
+    }    
+    .img-box{
+        width: 100%;
+    }
+    .text-box{
+        width: 100%;
+    }
+    .text-box h5{
+        text-align: center;
+        margin: 30px 0 
+    }
+    .pc-text{
+        display: none
+    }
+    .mb-text{
+        display: block !important;
+    }
+}
+
+
+
+
+/** tab **/
+    .nav-tabs{
+    border-bottom: none !important
+}   
+.nav-link{
+    color: #9c9c9c !important
+} 
+.nav-link.active{
+    border: none !important;
+    border-bottom: 2px solid #00223e !important;
+    color:#00223e !important;
+}
+.nav-tabs .nav-link:hover{
+    border-color:#fff;
+    color:#00223e !important;
+    font-weight: 600
+}
+>>>>>>> 1dd8124f3fd70aa36fd624f7670f1de91c5d0837
