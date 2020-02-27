@@ -1215,10 +1215,6 @@ border-radius: .25rem;
     margin-bottom: -1px;
     color: #001f43;
 }
-<<<<<<< HEAD
-
-
-=======
 @media (max-width: 768px){
     .nav-tabs .nav-item{
         width: 100%;
@@ -1320,6 +1316,12 @@ border-radius: .25rem;
     .mb-text{
         display: block !important;
     }
+    .business-intro h2{
+        text-align: center;
+    }
+    .business-intro span{
+        margin: 30px auto;
+    }
 }
 
 
@@ -1342,4 +1344,3 @@ border-radius: .25rem;
     color:#00223e !important;
     font-weight: 600
 }
->>>>>>> 1dd8124f3fd70aa36fd624f7670f1de91c5d0837
