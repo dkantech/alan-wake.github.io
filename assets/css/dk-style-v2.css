@@ -345,21 +345,47 @@ section .banner-text h2 + p {
   color: #da4859;
 }
 .business-wrap .container .row div {
-  text-align: center;
+  text-align: left;
+  width: 350px;
+  margin: 25px auto;
 }
 .business-wrap .container .row div img {
-  width: 95px;
+  width: 110px;
 }
-.business-img-list div {
-  margin: 15px 0 50px 0;
+.business-img-list > div {
+  margin: 15px 0 50px 35px;
   color: #00223e;
 }
+.business-img-list {
+  display: flex;
+}
 .business-img-list strong {
-  font-size: 15px;
+  font-size: 20px;
+  color: #0e64a5;
 }
 .business-img-list p {
   font-size: 12px;
   margin-top: 8px;
+  color: #505c67;
+}
+@media (max-width: 1200px) {
+  /* * * * * * *index 비즈니스 영역 1200px * * * * * * */
+  .business-wrap .container .row div {
+    width: 270px;
+  }
+}
+@media (max-width: 992px) {
+  /* * * * * * *index 비즈니스 영역 992px * * * * * * */
+  .business-img-list {
+    display: block;
+  }
+  .business-img-list > div {
+    margin-left: 0;
+  }
+  .business-wrap .container .row div {
+    text-align: center;
+    width: auto;
+  }
 }
 
 /* * * * * * * * advantage * * * * * * * */
