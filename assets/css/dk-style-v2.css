@@ -387,6 +387,15 @@ section .banner-text h2 + p {
     width: auto;
   }
 }
+@media (max-width: 767px) {
+  /* * * * * * *index 비즈니스 영역 767px * * * * * * */
+  .business-img-list p {
+    margin: 0 30px;
+  }
+  .business-text p {
+    margin: 0 20px;
+  }
+}
 
 /* * * * * * * * advantage * * * * * * * */
 .advantage-wrap {
