@@ -1318,6 +1318,7 @@ ol {
 .fclt-content {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .business-intro p {
   color: #08213b;
