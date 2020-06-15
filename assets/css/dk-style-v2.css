@@ -232,6 +232,7 @@ section .banner-text-main h2 + p {
 }
 .win-banner {
   display: flex;
+  justify-content: unset;
 }
 .win-banner > img {
   border: 3px solid #144b7b !important;
@@ -263,6 +264,9 @@ section .banner-text-main h2 + p {
   }
   .banner-win-text > div {
     max-width: 500px;
+  }
+  .win-banner {
+    justify-content: center !important;
   }
 }
 
@@ -296,7 +300,16 @@ section .banner-text-main h2 + p {
 @media (max-width: 499px) {
   /* * * * * * * section 499px * * * * * * */
   section .banner-item img {
-    width: 300px;
+    width: 330px;
+  }
+  .banner-text-main {
+    margin: 0;
+  }
+  .win-banner {
+    justify-content: center !important;
+  }
+  .banner-win-text > div {
+    margin-bottom: 100px !important;
   }
 }
 /* * * * * * *  business header * * * * * * */
