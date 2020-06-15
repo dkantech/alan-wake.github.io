@@ -122,8 +122,8 @@ header:after {
 #search-input,
 #search-input-mobile {
   border-radius: 20px;
-  width: 130px;
-  height: 25px;
+  width: 225px;
+  height: 45px;
 }
 .mobile-header-menu {
   position: absolute;
@@ -172,9 +172,20 @@ header:after {
 section {
   width: 100%;
   height: 650px;
-  background-image: url('/assets/images/banner_background.png');
-  background-size: cover;
+  /* background-image: url('/assets/images/banner_background.png');
+  background-size: cover; */
   position: relative;
+}
+.banner-back {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.back-img1 {
+  background-image: url('/assets/images/banner_background.png');
+}
+.back-img2 {
+  background-image: url('/assets/images/win-background.png');
 }
 section .banner-wrap {
   height: 100%;
@@ -195,18 +206,19 @@ section .banner-item img {
   width: 80%;
 }
 
-section .banner-text {
+section .banner-text-main {
   color: #fff;
 }
-section .banner-text .bold {
+section .banner-text-main .bold {
   font-weight: 600;
   font-size: 25px;
   margin: 0;
 }
-section .banner-text h2 {
+section .banner-text-main h2 {
   font-size: 40px;
 }
-section .banner-text a {
+section .banner-text-main a,
+.banner-win-text a {
   background-color: #da4859;
   color: #fff !important;
   font-size: 12px;
@@ -215,14 +227,42 @@ section .banner-text a {
   margin-left: 5px;
   display: inline-block;
 }
-section .banner-text h2 + p {
+section .banner-text-main h2 + p {
   font-size: 14px;
+}
+.win-banner {
+  display: flex;
+}
+.win-banner > img {
+  border: 3px solid #144b7b !important;
+  width: 35% !important;
+}
+.win-banner > img:first-child {
+  margin-right: 20px !important;
+}
+
+.banner-win-text > div > span {
+  display: block;
+  font-size: 35px;
+  font-weight: 600;
+  color: #da4858;
+}
+.plus {
+  font-size: 40px !important;
+  line-height: 40px;
+}
+.banner-win-text p {
+  color: #5b5b5b;
+  font-weight: 400;
 }
 
 @media (min-width: 1200px) {
   /* * * * * * * section 1200px * * * * * * */
-  .banner-text > div {
+  .banner-text-main > div {
     max-width: 450px;
+  }
+  .banner-win-text > div {
+    max-width: 500px;
   }
 }
 
@@ -233,15 +273,23 @@ section .banner-text h2 + p {
     width: 100%;
     height: 50%;
   }
-  .banner-text {
+  .banner-text-main,
+  .banner-win-text {
     margin-top: 20px;
     text-align: center;
   }
-  .banner-text h2 + p {
+  .banner-text-main h2 + p,
+  .banner-win-text h2 + p {
     display: none;
   }
   section .banner-item img {
     width: 450px;
+  }
+  .back-img2 {
+    background-image: url('/assets/images/win-background-mb.png');
+  }
+  .win-banner {
+    justify-content: center;
   }
 }
 
