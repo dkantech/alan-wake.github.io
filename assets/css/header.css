@@ -1,34 +1,27 @@
-header {
+  header {
     height: 85px;
   }
-  .header-logo,
-  .header-logo a{
-    
-  }
-  .container{
+  .header-wrap{
+  position: relative;
     max-width: 1400px;
-    padding-top: 20px;
+    margin: auto;
   }
-  .row{
-    justify-content: space-between;
-  }
-  .header-logo{
-    width: 13%;
-  }
-  .header-logo a{
-    display: flex;
-    align-items: center;
+  .header-wrap h1{
+   position: absolute;
+   top: 0;
+   left: 10px;
+   width: 140px;
+   height: 85px; 
   } 
-  .header-logo a img {
-    width: 100%;
-  }
-  .nav-center{
+  .gnb{
     z-index: 300;
-    width: 77%;
-    height: 100%;
+    overflow: hidden;
+    padding-left: 200px;
   }
+  
   .nav-item{
-      padding: 5px 20px;
+    margin: 30px 0;
+      padding: 0 20px;
       text-align: center;
       width: 25%;
   }
@@ -43,10 +36,20 @@ header {
       padding:20px
   }
 
+  .nav-contact{
+width: 10%;
+  }
+  .contact-icon:hover{
+    width: 120px;
+    background-color: #cf183b;
+    border: none;
+  }
   .contact-icon{
-    width: 110px;
+    width: 50px;
     height: 40px;
-    background-color: tomato;
-    border-radius: 3px;
-    float: right;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding-top: 11px 13px;
+    transition: all .2s;
+
   }
