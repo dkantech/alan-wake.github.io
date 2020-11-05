@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    {% include head.html %}
+  {% include head.html %}
 </head>
 
 <body class="{{ page.layout | append: '-template' }}">
-    {% include sub_header.html %}
+  {% include sub_header.html %}
 
-    {% include business_banner.html %}
-    
-    <main role="main">
+  {% include business_banner.html %}
 
-    <div id="content" class="container">          
-        
-        <!-- Nav tabs -->
-        <ul id="business-navs" class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link {% if page.url contains '/business/fclt/' %} active {% endif %}" id="business-tab-1"  href="{{ base_path }}/business/fclt/">
-              스마트 유지관리 플랫폼</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if page.url contains '/business/ipes/' %} active {% endif %}" id="business-tab-2"  href="{{ base_path }}/business/ipes/" >
-              불법주정차 무인단속시스템</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if page.url contains '/business/traffic/' %} active {% endif %}" id="business-tab-3"  href="{{ base_path }}/business/traffic/" >
-              지능형 교통관리 소프트웨어</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if page.url contains '/business/smartcity/' %} active {% endif %}" id="business-tab-4"  href="{{ base_path }}/business/smartcity/" >
-              스마트시티 플랫폼</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if page.url contains '/business/cctv/' %} active {% endif %}" id="business-tab-5"  href="{{ base_path }}/business/cctv/" >
-              CCTV 통합관제 플랫폼</a>
-          </li>
-          <li class="nav-item">
+  <main role="main">
+
+    <div id="content" class="container">
+
+      <!-- Nav tabs -->
+      <ul id="business-navs" class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/business/fclt/' %} active {% endif %}" id="business-tab-1"
+            href="{{ base_path }}/business/fclt/">
+            스마트 유지관리 플랫폼</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/business/ipes/' %} active {% endif %}" id="business-tab-2"
+            href="{{ base_path }}/business/ipes/">
+            불법주정차 무인단속시스템</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/business/traffic/' %} active {% endif %}" id="business-tab-3"
+            href="{{ base_path }}/business/traffic/">
+            지능형 교통관리 소프트웨어</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/business/smartcity/' %} active {% endif %}" id="business-tab-4"
+            href="{{ base_path }}/business/smartcity/">
+            스마트시티 플랫폼</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/business/cctv/' %} active {% endif %}" id="business-tab-5"
+            href="{{ base_path }}/business/cctv/">
+            CCTV 통합관제 플랫폼</a>
+        </li>
+        <!-- <li class="nav-item">
             <a class="nav-link {% if page.url contains '/business/timegram/' %} active {% endif %}" id="business-tab-6"  href="{{ base_path }}/business/timegram/" >
               타임그램(애플리케이션)</a>
-          </li>
-        </ul>
-        <div id="business-content-wrap">
-            {{ content }}
-        </div>
-    
+          </li> -->
+      </ul>
+      <div id="business-content-wrap">
+        {{ content }}
+      </div>
+
     </div>
 
     <div class="clearfix"></div>
-</main>
+  </main>
 
-{% include footer.html %}
+  {% include footer.html %}
 
 </body>
+
 </html>
-
-
-
