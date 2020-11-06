@@ -1471,7 +1471,7 @@ ol {
   border-bottom: none !important;
 }
 .nav-link {
-  color: #9c9c9c !important;
+  color: #ad9292 ;
 }
 .nav-link.active {
   border: none !important;
@@ -1483,3 +1483,5 @@ ol {
   color: #00223e !important;
   font-weight: 600;
 }
+
+
