@@ -1487,3 +1487,54 @@ ol {
 
 
 /* * * * * *  제품소개탭 * * * * * */
+/* .d-none{
+  display: none;
+}
+.d-block{
+  display: block;
+}
+.product-content{
+  color: #333;
+}
+.tab-box{
+  display: flex;
+  cursor: pointer;
+}
+.tab-box li{
+  text-align: center;
+  border: 1px solid #f5f6fa;
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 46px;
+}
+
+.tab-btn-click{
+  background-color: #f85d58;
+  color: #fff;
+}
+.ai-2th-tab-box{
+  margin: 0 20px;
+}
+#ai-2th-tab1{
+  display: block;
+}
+#ai-2th-tab2{
+ display: none;
+}
+.ai-2th-tab-box span{
+  width: 100%;
+  color: #6a6a6a;
+  text-align: center;
+}
+.tab-content{
+  display: inline-block;
+  padding-left: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: teal;
+
+}
+.tab-content-box{
+  display: none;
+} */
