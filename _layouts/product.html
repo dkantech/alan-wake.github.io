@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% include head.html %}
+</head>
+
+<body class="{{ page.layout | append: '-template' }}">
+  {% include sub_header.html %}
+
+  {% include business_banner.html %}
+
+  <main role="main">
+
+    <div id="content" class="container">
+
+      <!-- Nav tabs -->
+      <ul id="business-navs" class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/product/led/' %} active {% endif %}" id="business-tab-1"
+            href="{{ base_path }}/product/led/">
+            Full Color LED 전광판</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/product/ai_analysis/' %} active {% endif %}" id="business-tab-2"
+            href="{{ base_path }}/product/ai_analysis/">
+            인공지능 영상분석 시스템</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/product/nvr/' %} active {% endif %}" id="business-tab-3"
+            href="{{ base_path }}/product/nvr/">
+            네트워크 비디오 레코더(NVR)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/product/cms_ip/' %} active {% endif %}" id="business-tab-4"
+            href="{{ base_path }}/product/cms_ip/">
+            CMS&amp;IP Wall</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/product/elcb/' %} active {% endif %}" id="business-tab-5"
+            href="{{ base_path }}/product/elcb/">
+            누전차단기</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/product/integration_control/' %} active {% endif %}"
+            id="business-tab-6" href="{{ base_path }}/product/integration_control/">
+            통합제어기</a>
+        </li>
+      </ul>
+      <div id="business-content-wrap">
+        {{ content }}
+      </div>
+
+    </div>
+
+    <div class="clearfix"></div>
+  </main>
+
+  {% include footer.html %}
+
+</body>
+
+</html>
