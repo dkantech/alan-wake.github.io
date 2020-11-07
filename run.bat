@@ -1,2 +1,2 @@
 chcp 65001
-bundle exec jekyll serveruby 
+bundle exec jekyll server
