@@ -1551,6 +1551,7 @@ ol {
   left: 100px;
   border: 2px solid #ccc;
   z-index: 999;
+  visibility: hidden;
 }
 .popup-location form {
   position: absolute;
