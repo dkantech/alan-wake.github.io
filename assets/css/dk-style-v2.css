@@ -1553,12 +1553,12 @@ ol {
   z-index: 999;
   visibility: hidden;
 }
-.popup-location form {
+.popup-location div {
   position: absolute;
   bottom: 8px;
   right: 10px;
 }
 
-.popup-location form a {
+.popup-location div a {
   margin-left: 7px;
 }
