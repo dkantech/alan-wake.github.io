@@ -1,46 +1,40 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     {% include head.html %}
     <style>
-        .test{
-            width: 500px;
-            height: 500px;
-            background-color: dodgerblue;
-            position: absolute;
-            top: 100px;
-            left: 100px;
-            
-        }
+
     </style>
 </head>
+
 <body class="{{ page.layout | append: '-template' }}">
-    <div id="noticePopup" class="test">
-        <form name="notice_form"> 
-            <td > 
-                <input type="checkbox" name="chkbox" value="checkbox">오늘 하루 이 창을 열지 않음 
-                <a href="javascript:closeWin();"><B>[닫기]</B></a> 
-            </td> 
-        </tr> 
-                </form> 
+    <div id="noticePopup" class="popup-location">
+        <form name="notice_form">
+            <td>
+                <input type="checkbox" name="chkbox" value="checkbox">오늘 하루 이 창을 열지 않음
+                <a href="javascript:closeWin();"><B>[닫기]</B></a>
+            </td>
+            </tr>
+        </form>
     </div>
-{% include header.html %}
+    {% include header.html %}
 
-<main role="main">         
-    <div id="content" >
-      <div id="home-content" role="main">
-        {{ content }}
-      </div>
-    </div>
+    <main role="main">
+        <div id="content">
+            <div id="home-content" role="main">
+                {{ content }}
+            </div>
+        </div>
 
-    <div class="clearfix">  
-    </div>
-</main>
+        <div class="clearfix">
+        </div>
+    </main>
 
 
-{% include footer.html %}
+    {% include footer.html %}
 
-<!-- 
+    <!-- 
 
 {% if site.google_analytics %}
 {% include google_analytics.html %}
@@ -61,55 +55,56 @@
     {% endif %}
 {% endif %} -->
 </body>
+
 </html>
 
 <!-- <div id="cover" class="container-fluid" -->
-     <!-- {% if site.image %}style="background-image:url({{ site.image }});"{% endif %}> -->
-    <!-- {% if paginator.page == 1 %} -->
-        <!--[if (gt IE 9)|!(IE)]><!-->
-        <!-- <video loop muted preload="metadata" crossorigin="anonymous">
+<!-- {% if site.image %}style="background-image:url({{ site.image }});"{% endif %}> -->
+<!-- {% if paginator.page == 1 %} -->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<!-- <video loop muted preload="metadata" crossorigin="anonymous">
             <source src="{{ site.asset_url }}/images/blog_cover.webm" type="video/webm"/>
             <source src="{{ site.asset_url }}/images/blog_cover.ogv" type="video/ogg"/>
             <source src="{{ site.asset_url }}/images/blog_cover.mp4" type="video/mp4"/>
         </video> -->
-        <!--<![endif]-->
-    <!-- {% endif %} -->
-    <!-- <div>
+<!--<![endif]-->
+<!-- {% endif %} -->
+<!-- <div>
         <h1>{{ site.title }}</h1>
         <p>{{ site.description | newline_to_br }}</p>
     </div> -->
 <!-- </div> -->
 
 
-<script language="Javascript"> 
-    function setCookie( name, value, expiredays ) { 
-        var todayDate = new Date(); 
-            //현재 날짜시간
-            todayDate.setDate( todayDate.getDate() + expiredays ); 
-            // 현재 시간을 기준으로 setdate(숫자) 숫자의 날을 계산
-            // todayDate.getDate() + expiredays : 현재날짜의 date를 가져와서 exporedays를 추가
-            document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toUTCString() + ";" 
-            // document.cookie = "Name=Value(값);Expires=날짜;Domain=도멘인;Path=경로;Secure"; 
-            // name = 값; path=/; Expires= 현재 시간;
-            // name과 값 : 데이터를 저장하고 읽는 데 사용하는 속성
-            // Expires: 쿠키의 파기 날짜를 지정하는 속성 UTC형식으로 적어야함. 별도 안 쓸 시 브라우저 종료 시 쿠키 삭제
-            // path=/ 도메인 내 모든 곳에서 접근 가능
-                    // todayDate.toUTCString()의 todayDate는 현재 시각인가? 두 번째 줄은 어떻게 활용?
-        }
-    function closeWin() { 
-        if ( document.notice_form.chkbox.checked ){ 
-            setCookie( "maindiv", "done" , 1 ); 
+<script language="Javascript">
+    function setCookie(name, value, expiredays) {
+        var todayDate = new Date();
+        //현재 날짜시간
+        todayDate.setDate(todayDate.getDate() + expiredays);
+        // 현재 시간을 기준으로 setdate(숫자) 숫자의 날을 계산
+        // todayDate.getDate() + expiredays : 현재날짜의 date를 가져와서 exporedays를 추가
+        document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toUTCString() + ";"
+        // document.cookie = "Name=Value(값);Expires=날짜;Domain=도멘인;Path=경로;Secure"; 
+        // name = 값; path=/; Expires= 현재 시간;
+        // name과 값 : 데이터를 저장하고 읽는 데 사용하는 속성
+        // Expires: 쿠키의 파기 날짜를 지정하는 속성 UTC형식으로 적어야함. 별도 안 쓸 시 브라우저 종료 시 쿠키 삭제
+        // path=/ 도메인 내 모든 곳에서 접근 가능
+        // todayDate.toUTCString()의 todayDate는 현재 시각인가? 두 번째 줄은 어떻게 활용?
+    }
+    function closeWin() {
+        if (document.notice_form.chkbox.checked) {
+            setCookie("maindiv", "done", 1);
             // notice_form의 체크박스가 체크 된다면, 
             // maindiv = done; path=/; Expires= 현재 시간 
-        } 
-        document.all['noticePopup'].style.visibility = "hidden"; 
+        }
+        document.all['noticePopup'].style.visibility = "hidden";
     }      // noticePopup이 숨겨짐.
 
-    cookiedata = document.cookie;    
-if ( cookiedata.indexOf("maindiv=done") < 0 ){      
-    document.all['noticePopup'].style.visibility = "visible"; 
+    cookiedata = document.cookie;
+    if (cookiedata.indexOf("maindiv=done") < 0) {
+        document.all['noticePopup'].style.visibility = "visible";
+    }
+    else {
+        document.all['noticePopup'].style.visibility = "hidden";
     } 
-    else { 
-        document.all['noticePopup'].style.visibility = "hidden"; 
-} 
-    </script> 
+</script>
