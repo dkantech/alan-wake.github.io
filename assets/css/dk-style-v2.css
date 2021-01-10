@@ -54,6 +54,10 @@ a {
 ul li {
   list-style: none;
 }
+ul{
+  padding: 0;
+  margin: 0;
+}
 #wrapper {
   padding-bottom: 100px;
 }
@@ -1659,7 +1663,6 @@ ol {
   margin-left: 30px;
   margin-bottom: 40px;
   display: flex;
-  flex-direction: column;
 }
 .num-style{
   color: #aaa;
@@ -1669,13 +1672,40 @@ ol {
 .content-style{
   margin-left: 30px;
 }
-.content-style dt{
+.content-style dl dt{
   margin-bottom: 20px;
   font-size: 22px;
 }
-.content-style dd{
-  color: #333;
+.content-style dl dd{
+  color: #777;
 }
+.content-border-style{
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+.num-deco{
+  border-bottom: 2px solid #aaa;
+  height: 32px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.content-border-style dl{
+  margin-left: 30px;
+  margin-bottom: 0;
+}
+.content-border-style dl dt{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.content-border-style dl dd{
+  color: #777;
+}
+
+
 .arrow-circle{
   width: 65px;
   height: 65px;
@@ -1700,10 +1730,65 @@ justify-content: center;
 }
 
 .certificate-bg img{
-  width: 230px;
+  width: 22%;
   margin-left: 50px;
 
 }
 .certificate-bg img:first-child{
   margin-left: 0;
+}
+.ipes-box{
+  margin-bottom: 20px;
+  align-items: center;
+}
+.num-size{
+  font-size: 30px;
+  font-weight: 600;
+}
+.ipes-box ul{
+  color: #777;
+  margin-left: 30px;
+}
+
+
+/* 지능형 교통관리 */
+.content-style-double dt{
+  margin-bottom: 15px;
+}
+.content-style-double dt:first-child{
+  font-size: 26px;
+}
+.content-style-double dt:nth-child(2){
+  font-size: 20px;
+}
+.content-style-double dd{
+  color: #444;
+  margin-bottom: 0;
+}
+.emphasis-color{
+  color: #bc0b44 !important;
+}
+
+/* cctv */
+
+.text-bg{
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-left: 30px;
+}
+.feature-box{
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 15px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+.feature-align{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.feature-align span{
+  margin-left: 10px;
 }
