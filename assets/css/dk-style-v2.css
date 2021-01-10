@@ -1562,3 +1562,148 @@ ol {
 .popup-location div a {
   margin-left: 7px;
 }
+
+
+/* 스마트 유지관리 플랫폼 */
+.color-default{
+  color: #333;
+}
+.title-mg{
+  margin-bottom: 20px;
+}
+.down-mg{
+  margin-bottom: 70px ;
+}
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sub-title{
+  margin: 80px 0 25px 0;
+}
+.sub-title::before{
+  margin-right: 20px;
+  content: '';
+  width: 19px;
+  border-bottom: 3px solid #ab2e49;
+  display: inline-block;
+  margin-bottom: 7px;
+}
+.table-align{
+  border-spacing: 15px 0px;
+  border-radius: 5px;
+  margin: auto;
+  border-collapse: separate;
+  border: 1px solid #ccc;
+  padding: 10px 5px;
+  width: 95%;
+}
+.table-align thead tr th{
+  text-align: center;
+  width: 30%;
+}
+.table-align tbody tr td{
+  width: 30%;
+}
+.border{
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  margin: 100px 0;
+}
+.effect-frame{
+  margin: auto;
+  width: 93%;
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 7px;
+}
+.effect-frame dl{
+  margin-left: 30px;
+  width: 33%;
+}
+.effect-frame dt{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.effect-frame dl:first-child{
+  margin-left: 0;
+}
+.feature-frame{
+  margin: 0 40px;
+  padding: 30px 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+}
+.feature-img{
+  margin-right: 70px;
+}
+.exam-frame{
+  margin: 0px 40px;
+}
+.exam-frame:first-child{
+  margin-bottom: 50px;
+}
+.exam-frame h6{
+  vertical-align: top;
+  display: inline-block;
+}
+.exam-frame ul{
+  display: inline-block;
+}
+.img-mg{
+  margin: 30px 0;
+}
+.content-box-style{
+  margin-left: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.num-style{
+  color: #aaa;
+  font-size: 24px;
+  font-weight: 600;
+}
+.content-style{
+  margin-left: 30px;
+}
+.content-style dt{
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.content-style dd{
+  color: #333;
+}
+.arrow-circle{
+  width: 65px;
+  height: 65px;
+  margin: 35px auto;
+  border: 1px dotted #777;
+  border-radius: 50px;
+  text-align: center;
+}
+.arrow-circle img{
+  opacity: .7;
+  transform: rotate(90deg);
+  width: 30px;
+  margin-top: 17px;
+}   
+.certificate-bg{
+  background-color: #eee;
+  height: 370px;
+  width: 100%;
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.certificate-bg img{
+  width: 230px;
+  margin-left: 50px;
+
+}
+.certificate-bg img:first-child{
+  margin-left: 0;
+}
