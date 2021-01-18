@@ -88,6 +88,7 @@ h1 {
 h2 {
   font-weight: 700;
 }
+
 /* * * * * * * header * * * * * * */
 article {
   width: 100%;
@@ -1659,10 +1660,18 @@ ol {
 .img-mg{
   margin: 30px 0;
 }
+.img-mg-center{
+  margin: 50px 0;
+  text-align: center;
+}
 .content-box-style{
   margin-left: 30px;
   margin-bottom: 40px;
   display: flex;
+}
+.content-box-style2{
+  margin-left: 30px;
+  margin-bottom: 40px;
 }
 .num-style{
   color: #aaa;
@@ -1749,7 +1758,18 @@ justify-content: center;
   color: #777;
   margin-left: 30px;
 }
-
+.consist-wrap{
+  flex-wrap: wrap;
+}
+.consist-text dl dt img{
+  width: 100%;
+}
+.consist-text span{
+  margin-right: 20px;
+}
+.consist-text dl dt{
+  margin: 15px 0 30px 0
+}
 
 /* 지능형 교통관리 */
 .content-style-double dt{
@@ -1768,7 +1788,13 @@ justify-content: center;
 .emphasis-color{
   color: #bc0b44 !important;
 }
-
+.img-caption dl{
+ text-align: center;
+}
+.img-caption dl dd{
+  color: #999;
+  margin-top: 20px;
+}
 /* cctv */
 
 .text-bg{
