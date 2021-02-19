@@ -8,48 +8,37 @@
 <body class="{{ page.layout | append: '-template' }}">
   {% include sub_header.html %}
 
-  {% include business_banner.html %}
+  {% include default_banner.html %}
+
   <main role="main">
-    <div class="dk-container">
-      <img src="/assets/images/corp-intro.png" style="width: 100%;" />
-      <!-- <div class="info">
-        <div class="contact-left">
-          <h4>Contact Us</h4>
-          <ul>
-            <li><i class="icomoon icon-call"></i>&#43;82 2 459 7571</li>
-            <li><i class="icomoon icon-fax"></i>&#43;82 2 459 7572</li>
-            <li><i class="icomoon icon-message"></i>ydk@dkant.net</li>
-            <li><i class="icomoon icon-address"></i>서울특별시 강남구 광평로 47길 28 수서동, KT</li>
-          </ul>
-        </div>
-        <div class="contact-right">
-          <h4>Send A Message</h4>
-          <form id="contact-form" action="#" data-animate="fadeIn" data-animate-delay="0.4"
-            style="animation-delay: 0.4s;" class="animated animated-done">
 
-            <div class="form-group">
-              <label class="sr-only" for="contact-name">Name</label>
-              <input type="text" class="form-control form-control-transparent" id="contact-name" placeholder="Name">
+    <div id="content" class="container">
 
-            </div>
-            <div class="form-group">
-              <label class="sr-only" for="contact-email">Email</label>
-              <input type="email" class="form-control form-control-transparent" id="contact-email" placeholder="Email">
+      <!-- Nav tabs -->
+      <ul id="business-navs" class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/introduction/introduce/' %} active {% endif %}" id="business-tab-1"
+            href="{{ base_path }}/introduction/introduce/">
+            회사 소개</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/introduction/notice/' %} active {% endif %}" id="business-tab-2"
+            href="{{ base_path }}/introduction/notice/">
+            공지사항</a>
+        </li>
 
-            </div>
-            <div class="form-group">
-              <label class="sr-only" for="contact-message">Message</label>
-              <textarea rows="5" class="form-control form-control-transparent" id="contact-message"
-                placeholder="Message"></textarea>
+      </ul>
+      <div id="business-content-wrap">
+        {{ content }}
+      </div>
 
-            </div>
-            <input type="button" class="btn btn-lg btn-color" value="Send Message">
-          </form>
-        </div>
-      </div> -->
     </div>
-  </main>
-</body>
-<style>
 
-</style>
+    <div class="clearfix"></div>
+  </main>
+
+  {% include footer.html %}
+
+</body>
+
+</html>

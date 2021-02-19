@@ -54,7 +54,7 @@ a {
 ul li {
   list-style: none;
 }
-ul{
+ul {
   padding: 0;
   margin: 0;
 }
@@ -88,7 +88,15 @@ h1 {
 h2 {
   font-weight: 700;
 }
-
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.inline-center {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
 /* * * * * * * header * * * * * * */
 article {
   width: 100%;
@@ -1476,7 +1484,7 @@ ol {
   border-bottom: none !important;
 }
 .nav-link {
-  color: #ad9292 ;
+  color: #ad9292;
 }
 .nav-link.active {
   border: none !important;
@@ -1488,8 +1496,6 @@ ol {
   color: #00223e !important;
   font-weight: 600;
 }
-
-
 
 /* * * * * *  제품소개탭 * * * * * */
 /* .d-none{
@@ -1544,7 +1550,6 @@ ol {
   display: none;
 } */
 
-
 /* home popup css */
 .popup-location {
   width: 572px;
@@ -1568,26 +1573,25 @@ ol {
   margin-left: 7px;
 }
 
-
 /* 스마트 유지관리 플랫폼 */
-.color-default{
+.color-default {
   color: #333;
 }
-.title-mg{
+.title-mg {
   margin-bottom: 20px;
 }
-.down-mg{
-  margin-bottom: 70px ;
+.down-mg {
+  margin-bottom: 70px;
 }
-.flex-col{
+.flex-col {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.sub-title{
+.sub-title {
   margin: 80px 0 25px 0;
 }
-.sub-title::before{
+.sub-title::before {
   margin-right: 20px;
   content: '';
   width: 19px;
@@ -1595,7 +1599,7 @@ ol {
   display: inline-block;
   margin-bottom: 7px;
 }
-.table-align{
+.table-align {
   border-spacing: 15px 0px;
   border-radius: 5px;
   margin: auto;
@@ -1604,19 +1608,19 @@ ol {
   padding: 10px 5px;
   width: 95%;
 }
-.table-align thead tr th{
+.table-align thead tr th {
   text-align: center;
   width: 30%;
 }
-.table-align tbody tr td{
+.table-align tbody tr td {
   width: 30%;
 }
-.border{
+.border {
   border-bottom: 1px solid #ccc;
   width: 100%;
   margin: 100px 0;
 }
-.effect-frame{
+.effect-frame {
   margin: auto;
   width: 93%;
   display: flex;
@@ -1624,77 +1628,76 @@ ol {
   padding: 20px;
   border-radius: 7px;
 }
-.effect-frame dl{
+.effect-frame dl {
   margin-left: 30px;
   width: 33%;
 }
-.effect-frame dt{
+.effect-frame dt {
   text-align: center;
   margin-bottom: 30px;
 }
-.effect-frame dl:first-child{
+.effect-frame dl:first-child {
   margin-left: 0;
 }
-.feature-frame{
+.feature-frame {
   margin: 0 40px;
   padding: 30px 0;
   border-bottom: 1px solid #ddd;
   display: flex;
 }
-.feature-img{
+.feature-img {
   margin-right: 70px;
 }
-.exam-frame{
+.exam-frame {
   margin: 0px 40px;
 }
-.exam-frame:first-child{
+.exam-frame:first-child {
   margin-bottom: 50px;
 }
-.exam-frame h6{
+.exam-frame h6 {
   vertical-align: top;
   display: inline-block;
 }
-.exam-frame ul{
+.exam-frame ul {
   display: inline-block;
 }
-.img-mg{
+.img-mg {
   margin: 30px 0;
 }
-.img-mg-center{
+.img-mg-center {
   margin: 50px 0;
   text-align: center;
 }
-.content-box-style{
-  margin-left: 30px;
-  margin-bottom: 40px;
-  display: flex;
-}
-.content-box-style2{
+.content-box-style {
   margin-left: 30px;
   margin-bottom: 40px;
 }
-.num-style{
+.content-box-style2 {
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+.num-style {
   color: #aaa;
   font-size: 24px;
   font-weight: 600;
 }
-.content-style{
+.content-style {
   margin-left: 30px;
 }
-.content-style dl dt{
+.content-style dl dt {
   margin-bottom: 20px;
   font-size: 22px;
 }
-.content-style dl dd{
+.content-style dl dd {
   color: #777;
 }
-.content-border-style{
+.content-border-style {
   border: 1px solid #ddd;
   border-radius: 3px;
   padding: 15px 20px;
   margin-bottom: 20px;
 }
-.num-deco{
+.num-deco {
   border-bottom: 2px solid #aaa;
   height: 32px;
   color: #333;
@@ -1702,20 +1705,19 @@ ol {
   font-weight: 600;
 }
 
-.content-border-style dl{
+.content-border-style dl {
   margin-left: 30px;
   margin-bottom: 0;
 }
-.content-border-style dl dt{
+.content-border-style dl dt {
   font-size: 18px;
   margin-bottom: 10px;
 }
-.content-border-style dl dd{
+.content-border-style dl dd {
   color: #777;
 }
 
-
-.arrow-circle{
+.arrow-circle {
   width: 65px;
   height: 65px;
   margin: 35px auto;
@@ -1723,86 +1725,85 @@ ol {
   border-radius: 50px;
   text-align: center;
 }
-.arrow-circle img{
-  opacity: .7;
+.arrow-circle img {
+  opacity: 0.7;
   transform: rotate(90deg);
   width: 30px;
   margin-top: 17px;
-}   
-.certificate-bg{
+}
+.certificate-bg {
   background-color: #eee;
   height: 370px;
   width: 100%;
   display: flex;
-align-items: center;
-justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.certificate-bg img{
+.certificate-bg img {
   width: 22%;
   margin-left: 50px;
-
 }
-.certificate-bg img:first-child{
+.certificate-bg img:first-child {
   margin-left: 0;
 }
-.ipes-box{
+.ipes-box {
   margin-bottom: 20px;
   align-items: center;
 }
-.num-size{
+.num-size {
   font-size: 30px;
   font-weight: 600;
 }
-.ipes-box ul{
+.ipes-box ul {
   color: #777;
   margin-left: 30px;
 }
-.consist-wrap{
+.consist-wrap {
   flex-wrap: wrap;
 }
-.consist-text dl dt img{
+.consist-text dl dt img {
   width: 100%;
 }
-.consist-text span{
+.consist-text span {
   margin-right: 20px;
 }
-.consist-text dl dt{
-  margin: 15px 0 30px 0
+.consist-text dl dt {
+  margin: 15px 0 30px 0;
 }
 
 /* 지능형 교통관리 */
-.content-style-double dt{
+.content-style-double dt {
   margin-bottom: 15px;
 }
-.content-style-double dt:first-child{
+.content-style-double dt:first-child {
   font-size: 26px;
 }
-.content-style-double dt:nth-child(2){
+.content-style-double dt:nth-child(2) {
   font-size: 20px;
 }
-.content-style-double dd{
+.content-style-double dd {
   color: #444;
   margin-bottom: 0;
 }
-.emphasis-color{
+.emphasis-color {
   color: #bc0b44 !important;
 }
-.img-caption dl{
- text-align: center;
+.img-caption dl {
+  text-align: center;
 }
-.img-caption dl dd{
+.img-caption dl dd {
   color: #999;
   margin-top: 20px;
 }
 /* cctv */
 
-.text-bg{
+.text-bg {
   background-color: #f9f9f9;
   padding: 15px;
   margin-left: 30px;
 }
-.feature-box{
+.feature-box {
   width: 32%;
   border: 1px solid #eee;
   border-radius: 5px;
@@ -1811,12 +1812,24 @@ justify-content: center;
   margin-bottom: 10px;
   align-items: flex-start;
 }
-.feature-align{
+.feature-align {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 0 30px;
 }
-.feature-align span{
+.feature-align span {
   margin-left: 30px;
+}
+
+/* 제품 소개 반응형 */
+@media (max-width: 992px) {
+  .respone-none {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .respone-block {
+    display: block !important;
+  }
 }

@@ -66,7 +66,20 @@
         </span>
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item {% if page.url contains '/business/' %} active {% endif %}">
+            <li class="nav-item {% if page.url == '/introduction/' %} active {% endif %}">
+              <a class="nav-link " href="{{ base_path }}/introduction/introduce/" style="color: #fff;">회사소개</a>
+            </li>
+            <li class="nav-item {% if page.url == '/business/' %} active {% endif %}">
+              <a class="nav-link " href="{{ base_path }}/business/fclt/" style="color: #fff;">사업소개</a>
+            </li>
+            <li class="nav-item {% if page.url == '/product/' %} active {% endif %}">
+              <a class="nav-link " href="{{ base_path }}/product/led/" style="color: #fff;">제품소개</a>
+            </li>
+            <li
+              class="nav-item {% if page.url == '/' %} {% elsif page.url == '/business/' %} {% elsif page.url == '/contactus/' %} {% else %} active {% endif %}">
+              <a class="nav-link " href="{{ base_path }}/technote/" style="color: #fff;">테크노트</a>
+            </li>
+            <!-- <li class="nav-item {% if page.url contains '/business/' %} active {% endif %}">
               <a class="nav-link" href="{{ base_path }}/business/fclt/">BUSINESS</a>
             </li>
             <li
@@ -75,7 +88,7 @@
             </li>
             <li class="nav-item {% if page.url contains '/contactus/' %} active {% endif %}">
               <a class="nav-link" href="{{ base_path }}/contactus/">CONTACT US</a>
-            </li>
+            </li> -->
           </ul>
           <!-- </div>          
               </nav> -->
