@@ -1496,7 +1496,10 @@ ol {
   color: #00223e !important;
   font-weight: 600;
 }
-
+/* 제품 소개 탭 */
+.half-box > div {
+  width: 45%;
+}
 /* * * * * *  제품소개탭 * * * * * */
 /* .d-none{
   display: none;
@@ -1660,6 +1663,7 @@ ol {
 }
 .exam-frame ul {
   display: inline-block;
+  margin-left: 40px;
 }
 .img-mg {
   margin: 30px 0;
@@ -1805,7 +1809,7 @@ ol {
 }
 .feature-box {
   width: 32%;
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
   margin-left: 5px;
@@ -1826,6 +1830,9 @@ ol {
 @media (max-width: 992px) {
   .respone-none {
     display: none;
+  }
+  .half-box > div {
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
