@@ -9,14 +9,19 @@
 </head>
 
 <body class="{{ page.layout | append: '-template' }}">
-    <div id="noticePopup" class="popup-location">
+    <div id="noticePopup" class="popup-size popup-location-1">
         <div>
             <input id="checkToday" type="checkbox" name="chkbox" value="checkbox">
             <label for="checkToday">오늘 하루 이 창을 열지 않음</label>
             <a href="javascript:closeWin();">[닫기]</a>
         </div>
-
-
+    </div>
+    <div id="noticePopup" class="popup-size popup-location-2">
+        <div>
+            <input id="checkToday" type="checkbox" name="chkbox" value="checkbox">
+            <label for="checkToday" style="color: #fff;">오늘 하루 이 창을 열지 않음</label>
+            <a href="javascript:closeWin();" style="color: #fff;">[닫기]</a>
+        </div>
     </div>
     {% include header.html %}
 

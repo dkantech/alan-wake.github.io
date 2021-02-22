@@ -1556,25 +1556,32 @@ ol {
 } */
 
 /* home popup css */
-.popup-location {
+.popup-size {
   width: 572px;
   height: 643px;
-  background-image: url(/assets/images/tta-popup-img.png);
   background-size: cover;
   position: absolute;
-  top: 50px;
-  left: 100px;
   border: 2px solid #ccc;
   z-index: 999;
   visibility: hidden;
 }
-.popup-location div {
+.popup-location-1 {
+  background-image: url(/assets/images/tta-popup-img.png);
+  top: 50px;
+  left: 100px;
+}
+.popup-location-2 {
+  background-image: url(/assets/images/popup-hitech.jpg);
+  top: 50px;
+  left: 690px;
+}
+.popup-size div {
   position: absolute;
-  bottom: 8px;
+  bottom: 0;
   right: 10px;
 }
 
-.popup-location div a {
+.popup-size div a {
   margin-left: 7px;
 }
 
