@@ -1850,3 +1850,14 @@ ol {
     display: block !important;
   }
 }
+
+/* mas */
+.table-img img {
+  width: 100%;
+}
+.mas-table {
+  text-align: center;
+}
+.mas-table tbody tr td {
+  vertical-align: middle;
+}
