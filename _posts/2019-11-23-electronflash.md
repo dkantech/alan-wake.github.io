@@ -4,6 +4,7 @@ title: 'Electron에서 Flash 사용방법과 블랙스크린이 나타나는 문
 author: BearKim
 date: 2019-11-23 00:25
 tags: [electron, flashplayer]
+categories: technote
 ---
 
 글을 너무 안쓴지 오래되서 뭐라도 쓰고싶었는데, 이 이슈가지고 낭비한 세시간이 너무 안타까워서 짤막한 글 몇 줄 남기기로 하였다.
@@ -15,6 +16,7 @@ Electron에서 FlashPlayer를 불러오는 소스는 너무 쉽게 검색이 가
 [Electron Flash 사용하기](https://tinydew4.github.io/electron-ko/docs/tutorial/using-pepper-flash-plugin/)
 <br>
 참고로 빌드에 사용한 package파일 하나 첨부하고 글을 마치겠다.
+
 ```json
 {
   "name": "dk-electron",
@@ -49,23 +51,17 @@ Electron에서 FlashPlayer를 불러오는 소스는 너무 쉽게 검색이 가
     "asar": false,
     "protocols": {
       "name": "dk-electron",
-      "schemes": [
-        "dkelectron"
-      ]
+      "schemes": ["dkelectron"]
     },
     "extraResources": [
       {
         "from": "./extraResources/",
         "to": "extraResources",
-        "filter": [
-          "**/*"
-        ]
+        "filter": ["**/*"]
       }
     ],
     "mac": {
-      "target": [
-        "default"
-      ],
+      "target": ["default"],
       "icon": "./resources/installer/Icon.icns"
     },
     "dmg": {
@@ -73,20 +69,11 @@ Electron에서 FlashPlayer를 불러오는 소스는 너무 쉽게 검색이 가
       "icon": "./resources/installer/Icon.icns"
     },
     "win": {
-      "target": [
-        "zip",
-        "nsis"
-      ],
+      "target": ["zip", "nsis"],
       "icon": "icons/icon.ico"
     },
     "linux": {
-      "target": [
-        "AppImage",
-        "deb",
-        "rpm",
-        "zip",
-        "tar.gz"
-      ],
+      "target": ["AppImage", "deb", "rpm", "zip", "tar.gz"],
       "icon": "./resources/linuxicon"
     },
     "nsis": {
@@ -100,5 +87,4 @@ Electron에서 FlashPlayer를 불러오는 소스는 너무 쉽게 검색이 가
     }
   }
 }
-
 ```
