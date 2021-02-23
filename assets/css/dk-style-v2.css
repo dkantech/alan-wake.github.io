@@ -1566,15 +1566,16 @@ ol {
   visibility: hidden;
 }
 .popup-location-1 {
-  background-image: url(/assets/images/tta-popup-img.png);
+  /* background-image: url(/assets/images/tta-popup-img.png); */
+  background-image: url(/assets/images/popup-hitech.jpg);
   top: 50px;
   left: 100px;
 }
-.popup-location-2 {
+/* .popup-location-2 {
   background-image: url(/assets/images/popup-hitech.jpg);
   top: 50px;
   left: 690px;
-}
+} */
 .popup-size div {
   position: absolute;
   bottom: 0;
