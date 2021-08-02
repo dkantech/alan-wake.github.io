@@ -1,92 +1,13 @@
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 100;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
-}
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 300;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');
-}
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 400;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
-}
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 500;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');
-}
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 700;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
-}
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 900;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');
-}
-
-a {
-  color: #1e1e1e;
-  text-decoration: none;
-}
-ul li {
-  list-style: none;
-}
-ul {
-  padding: 0;
-  margin: 0;
-}
-#wrapper {
-  padding-bottom: 100px;
-}
-html,
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR', 'Roboto', 'Segoe UI', 'Ubuntu', Arial, sans-serif;
-}
-body {
-  min-height: 100vh;
-  position: relative;
-}
 main {
   position: relative;
 }
-a:hover {
-  text-decoration: none !important;
-}
-
+/* #wrapper {
+  padding-bottom: 100px;
+} */
 .shadow {
   -webkit-box-shadow: 1px 1px 5px 0px rgba(143, 143, 143, 1);
   -moz-box-shadow: 1px 1px 5px 0px rgba(143, 143, 143, 1);
   box-shadow: 1px 1px 5px 0px rgba(143, 143, 143, 1);
-}
-
-h1 {
-  font-weight: 800;
-}
-h2 {
-  font-weight: 700;
 }
 .flex-between {
   display: flex;
@@ -97,26 +18,59 @@ h2 {
   width: 90%;
   margin: auto;
 }
+
+/* 공통 */
+.sub-title {
+  margin: 80px 0 25px 0;
+}
+.sub-title::before {
+  margin-right: 20px;
+  content: '';
+  width: 19px;
+  border-bottom: 3px solid #ab2e49;
+  display: inline-block;
+  margin-bottom: 7px;
+}
+
 /* * * * * * * header * * * * * * */
+/* search창 */
+.search__results {
+  background: #fff;
+  font-size: 14px;
+  transition: 0.2s ease;
+  position: absolute;
+  width: 350px;
+  -webkit-box-shadow: 0 8px 17px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  box-shadow: 0 8px 17px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  border-radius: 8px;
+  z-index: 999;
+  top: 55px;
+  right: -103px;
+}
+.search__results > li {
+  border-top: 1px solid #f0f0f0;
+  padding: 10px;
+}
+.search__results > li:hover {
+  background-color: #eee;
+  color: #0056b3;
+}
+.search__results > li:first-child {
+  border: none;
+}
+
 article {
   width: 100%;
   background-color: #00223e;
 }
 header {
   max-width: 1240px;
-  height: 70px;
+  height: 75px;
   margin: auto;
 }
-header:after {
-  content: '';
-  clear: both;
-  display: block;
-}
-
 .header-logo img {
-  margin-top: 5px;
+  margin-top: 7px;
   width: 180px;
-  /* height:auto;  */
 }
 .container {
   padding-top: 8px;
@@ -623,7 +577,7 @@ section .banner-text-main h2 + p {
   color: #fff;
 }
 #post-list .post-item .inbox > div.post-title h4 {
-  line-height: 25px;
+  line-height: 30px;
   font-size: 23px;
   word-break: break-all;
   word-wrap: break-word;
@@ -817,30 +771,6 @@ a.tag {
   section {
     height: 530px;
   }
-}
-
-/*search*/
-.search__results {
-  display: block;
-  background: #fff;
-  list-style: none;
-  padding: 0px;
-  font-size: 14px;
-  transition: 0.2s ease;
-  position: absolute;
-  width: 350px;
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 2px;
-  border: 0;
-  z-index: 999;
-  top: 50px;
-  right: 0px;
-  line-height: 22px;
-}
-.search__results > li {
-  border-top: 1px solid #f0f0f0;
-  padding: 10px;
 }
 
 /* footer */
@@ -1601,17 +1531,7 @@ ol {
   flex-direction: column;
   align-items: center;
 }
-.sub-title {
-  margin: 80px 0 25px 0;
-}
-.sub-title::before {
-  margin-right: 20px;
-  content: '';
-  width: 19px;
-  border-bottom: 3px solid #ab2e49;
-  display: inline-block;
-  margin-bottom: 7px;
-}
+
 .table-align {
   border-spacing: 15px 0px;
   border-radius: 5px;
@@ -1661,6 +1581,64 @@ ol {
 .feature-img {
   margin-right: 70px;
 }
+.consist-wrap {
+  flex-wrap: wrap;
+  display: flex;
+}
+.consist-text {
+  display: flex;
+  margin-bottom: 20px;
+}
+.consist-text dl dd:first-child {
+  font-size: 26px;
+}
+.consist-text dl dt {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.consist-text dl dt img {
+  width: 100%;
+}
+.consist-text span {
+  margin-right: 20px;
+  color: #aaa;
+  font-size: 24px;
+  font-weight: 600;
+}
+.consist-text dl dt {
+  margin: 15px 0 30px 0;
+}
+
+/* 스마트 유지관리 반응형 */
+@media (max-width: 992px) {
+  .feature-box {
+    width: 47%;
+  }
+}
+@media (max-width: 768px) {
+  .effect-frame {
+    display: block;
+  }
+  .effect-frame dl {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .effect-frame dl:last-child {
+    margin-bottom: 0;
+  }
+  .effect-frame dt {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .feature-frame {
+    display: block;
+  }
+  .feature-frame .feature-img {
+    text-align: center;
+    margin: 0;
+  }
+}
 .exam-frame {
   margin: 0px 40px;
 }
@@ -1681,6 +1659,9 @@ ol {
 .img-mg-center {
   margin: 50px 0;
   text-align: center;
+}
+.img-mg-center img {
+  width: 100%;
 }
 .content-box-style {
   margin-left: 30px;
@@ -1773,18 +1754,6 @@ ol {
   color: #777;
   margin-left: 30px;
 }
-.consist-wrap {
-  flex-wrap: wrap;
-}
-.consist-text dl dt img {
-  width: 100%;
-}
-.consist-text span {
-  margin-right: 20px;
-}
-.consist-text dl dt {
-  margin: 15px 0 30px 0;
-}
 
 /* 불법주정차 */
 
@@ -1829,7 +1798,7 @@ ol {
   color: #bc0b44 !important;
 }
 
-/* cctv */
+/* * * * * cctv * * * * */
 .feature-align {
   display: flex;
   justify-content: space-around;
@@ -1858,6 +1827,17 @@ ol {
 }
 .feature-box > div span {
   display: block;
+}
+/* cctv 992px 반응형 */
+@media (max-width: 992px) {
+  .feature-box {
+    width: 47%;
+  }
+}
+@media (max-width: 768px) {
+  .feature-box {
+    width: 100%;
+  }
 }
 
 /* 제품 소개 반응형 */
@@ -1921,6 +1901,7 @@ ol {
   color: #fff;
 }
 
+/* 사업소개 공통 레이아웃 css */
 .content-box {
   margin-left: 30px;
   margin-bottom: 50px;
@@ -1963,4 +1944,21 @@ ol {
 .text-bg {
   background-color: #f9f9f9;
   padding: 20px;
+}
+@media (max-width: 992px) {
+  .content-box div .content-img {
+    display: block;
+    text-align: center;
+  }
+  .content-box div .content-img img {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .content-box {
+    margin-left: 0;
+  }
+  .content-box > div {
+    margin-left: 10px;
+  }
 }
