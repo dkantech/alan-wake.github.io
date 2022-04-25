@@ -1,0 +1,19 @@
+---
+layout: introduction
+title: 공지사항
+permalink: /introduction/notice/
+sitemap: yes
+excerpt: notice
+tags: []
+---
+
+<div>
+  <ul id="post-list">
+  {% for post in site.categories.notice  %} {% include notice_item.html %} {% endfor %}
+</ul>
+
+</div>
+
+<style>
+
+</style>

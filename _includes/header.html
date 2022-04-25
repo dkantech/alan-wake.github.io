@@ -15,20 +15,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item {% if page.url == '/introduction/' %} active {% endif %}">
+                <li class="nav-item">
                   <a class="nav-link " href="{{ base_path }}/introduction/introduce/" style="color: #fff;">회사소개</a>
                 </li>
-                <li class="nav-item {% if page.url == '/business/' %} active {% endif %}">
+                <li class="nav-item">
                   <a class="nav-link " href="{{ base_path }}/business/fclt/" style="color: #fff;">사업소개</a>
                 </li>
-                <li class="nav-item {% if page.url == '/product/' %} active {% endif %}">
+                <li class="nav-item ">
                   <a class="nav-link " href="{{ base_path }}/product/led/" style="color: #fff;">제품소개</a>
                 </li>
                 <li
-                  class="nav-item {% if page.url == '/' %} {% elsif page.url == '/business/' %} {% elsif page.url == '/contactus/' %} {% else %} active {% endif %}">
+                  class="nav-item ">
                   <a class="nav-link " href="{{ base_path }}/technote/" style="color: #fff;">테크노트</a>
                 </li>
-
+                <li
+                  class="nav-item ">
+                  <a class="nav-link " href="{{ base_path }}/mas/" style="color: #fff;">MAS/3자단가</a>
+                </li>
               </ul>
             </div>
           </nav>
@@ -68,7 +71,24 @@
         </span>
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto">
+            <li class="nav-item {% if page.url == '/introduction/' %} active {% endif %}">
+              <a class="nav-link " href="{{ base_path }}/introduction/introduce/" style="color: #fff;">회사소개</a>
+            </li>
             <li class="nav-item {% if page.url == '/business/' %} active {% endif %}">
+              <a class="nav-link " href="{{ base_path }}/business/fclt/" style="color: #fff;">사업소개</a>
+            </li>
+            <li class="nav-item {% if page.url == '/product/' %} active {% endif %}">
+              <a class="nav-link " href="{{ base_path }}/product/led/" style="color: #fff;">제품소개</a>
+            </li>
+            <li
+              class="nav-item {% if page.url == '/' %} {% elsif page.url == '/business/' %} {% elsif page.url == '/contactus/' %} {% else %} active {% endif %}">
+              <a class="nav-link " href="{{ base_path }}/technote/" style="color: #fff;">테크노트</a>
+            </li>
+            <li
+            class="nav-item ">
+            <a class="nav-link " href="{{ base_path }}/mas/" style="color: #fff;">MAS/3자단가</a>
+          </li>
+            <!-- <li class="nav-item {% if page.url == '/business/' %} active {% endif %}">
               <a class="nav-link" href="{{ base_path }}/business/fclt/">BUSINESS</a>
             </li>
             <li
@@ -77,7 +97,7 @@
             </li>
             <li class="nav-item {% if page.url == '/contactus/' %} active {% endif %}">
               <a class="nav-link" href="{{ base_path }}/contactus/">CONTACT US</a>
-            </li>
+            </li> -->
           </ul>
           <!-- </div>          
             </nav> -->
@@ -110,7 +130,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item banner-back back-img2">
+      <!-- <div class="carousel-item banner-back back-img2">
         <div class="banner-item">
           <div class="win-banner">
             <img src="/assets/images/paper-kor.png">
@@ -124,6 +144,26 @@
 
             <p>산업 각 분야에서 혁신을 이루고 탁월한 경영 능력을 발휘한 기업을 선정해
               시상하는 행사에 DK ANT가 'K-ICT 대 수상 기업'에 선정되었습니다.
+            </p>
+            <div>
+              <a class="nav-link" href="{{ base_path }}/business/fclt"><span>스마트 시티 플랫폼이란?</span></a>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="carousel-item banner-back back-img2">
+        <div class="banner-item">
+          <div>
+            <img src="/assets/images/banner-platform-img2.png">
+
+          </div>
+        </div>
+        <div class="banner-item banner-text banner-win-text">
+          <div style="margin-bottom:150px">
+            <span class="plus">스마트시티 통합 플랫폼</span>
+            <span>TTA Certified 인증</span>
+
+            <p>
             </p>
             <div>
               <a class="nav-link" href="{{ base_path }}/business/fclt"><span>스마트 시티 플랫폼이란?</span></a>
@@ -144,53 +184,7 @@
       <span class="sr-only">Next</span>
     </a>
   </section>
-  <div style="color:#fff">
-    <!-- {{page.url}} -->
-  </div>
-  <!-- <header>
-  <div class="header-logo">
-    <span>
-        <a href="/"><img src="/assets/images/web_logo.jpg"></a>
-    </span>
-  </div>
-<nav class="navbar navbar-expand-md navbar-light" id="navBox">
-  <div class="container">
-    <span class='mbnavbar-logo'>
-        <a href="/"><img src="/assets/images/web_logo.jpg"></a>
-    </span>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item {% if page.url == '/' %} active {% endif %}">            
-            <a class="nav-link" href="{{ base_path }}/">About DKA.N.T</a>
-        </li>
-
-        <li class="nav-item {% if page.url == '/business/' %} active {% endif %}">
-            <a class="nav-link" href="{{ base_path }}/business/">Business</a>
-        </li>
-
-        <li class="nav-item {% if page.url != '/' && page.url != '/business' && page.url != '/contactus' %} active {% endif %}">
-            <a class="nav-link" href="{{ base_path }}/technote/">Tech Note</a>
-        </li>
-
-        <li class="nav-item {% if page.url == '/contactus/' %} active {% endif %}">
-            <a class="nav-link" href="{{ base_path }}/contactus/">Contact us</a>
-        </li>
-
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <ul class="search__results" id="results-container"></ul>
-        <div id="search">
-            <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search..." value="" />
-        </div>        
-      </form>
-    </div>
-  </div>       
-</nav>
-</header> -->
+  <div style="color:#fff"></div>
 
 </article>
 

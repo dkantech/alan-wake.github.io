@@ -1,0 +1,14 @@
+---
+layout: default
+title: notice
+excerpt: 디케이앤트
+---
+
+<div>
+  {% assign category = page.title %}
+  <ul id="tech-post-list">
+    {% for post in site.categories.notice %}
+      {% include notice_item.html %}
+    {% endfor %}
+  </ul>
+</div>

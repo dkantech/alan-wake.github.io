@@ -1,109 +1,76 @@
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 100;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
-}
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 300;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');
-}
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 400;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
-}
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 500;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');
-}
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 700;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
-}
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 900;
-  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');
-}
-
-a {
-  color: #1e1e1e;
-  text-decoration: none;
-}
-ul li {
-  list-style: none;
-}
-#wrapper {
-  padding-bottom: 100px;
-}
-html,
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR', 'Roboto', 'Segoe UI', 'Ubuntu', Arial, sans-serif;
-}
-body {
-  min-height: 100vh;
-  position: relative;
-}
 main {
   position: relative;
 }
-a:hover {
-  text-decoration: none !important;
-}
-
+/* #wrapper {
+  padding-bottom: 100px;
+} */
 .shadow {
   -webkit-box-shadow: 1px 1px 5px 0px rgba(143, 143, 143, 1);
   -moz-box-shadow: 1px 1px 5px 0px rgba(143, 143, 143, 1);
   box-shadow: 1px 1px 5px 0px rgba(143, 143, 143, 1);
 }
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.inline-center {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
 
-h1 {
-  font-weight: 800;
+/* 공통 */
+.sub-title {
+  margin: 80px 0 25px 0;
 }
-h2 {
-  font-weight: 700;
+.sub-title::before {
+  margin-right: 20px;
+  content: '';
+  width: 19px;
+  border-bottom: 3px solid #ab2e49;
+  display: inline-block;
+  margin-bottom: 7px;
 }
+
 /* * * * * * * header * * * * * * */
+/* search창 */
+.search__results {
+  background: #fff;
+  font-size: 14px;
+  transition: 0.2s ease;
+  position: absolute;
+  width: 350px;
+  -webkit-box-shadow: 0 8px 17px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  box-shadow: 0 8px 17px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  border-radius: 8px;
+  z-index: 999;
+  top: 55px;
+  right: -103px;
+}
+.search__results > li {
+  border-top: 1px solid #f0f0f0;
+  padding: 10px;
+}
+.search__results > li:hover {
+  background-color: #eee;
+  color: #0056b3;
+}
+.search__results > li:first-child {
+  border: none;
+}
+
 article {
   width: 100%;
   background-color: #00223e;
 }
 header {
   max-width: 1240px;
-  height: 70px;
+  height: 75px;
   margin: auto;
 }
-header:after {
-  content: '';
-  clear: both;
-  display: block;
-}
-
 .header-logo img {
-  margin-top: 5px;
+  margin-top: 7px;
   width: 180px;
-  /* height:auto;  */
 }
 .container {
   padding-top: 8px;
@@ -144,19 +111,18 @@ header:after {
 /* * * * * * * sub page header * * * * * * */
 .sub-header-wrap {
   position: relative;
-  height: 170px;
-  background-color: #00223e;
+  height: 250px;
+  /* background-color: #00223e; */
+  background-image: url(/assets/images/banner-back.jpg);
+  background-size: cover;
 }
 .sub-header {
-  height: 100px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .sub-header h1 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 30%;
   color: #fff;
   text-align: center;
+  line-height: 250px;
   font-weight: 500;
   font-size: 35px;
 }
@@ -166,6 +132,9 @@ header:after {
   border-style: solid;
   border-width: 70px 0 0 70px;
   border-color: transparent transparent transparent #da4859;
+}
+/* 헤더 반응형 */
+@media (max-width: 992px) {
 }
 
 /* * * * * * * section * * * * * * */
@@ -608,7 +577,7 @@ section .banner-text-main h2 + p {
   color: #fff;
 }
 #post-list .post-item .inbox > div.post-title h4 {
-  line-height: 25px;
+  line-height: 30px;
   font-size: 23px;
   word-break: break-all;
   word-wrap: break-word;
@@ -802,30 +771,6 @@ a.tag {
   section {
     height: 530px;
   }
-}
-
-/*search*/
-.search__results {
-  display: block;
-  background: #fff;
-  list-style: none;
-  padding: 0px;
-  font-size: 14px;
-  transition: 0.2s ease;
-  position: absolute;
-  width: 350px;
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 2px;
-  border: 0;
-  z-index: 999;
-  top: 50px;
-  right: 0px;
-  line-height: 22px;
-}
-.search__results > li {
-  border-top: 1px solid #f0f0f0;
-  padding: 10px;
 }
 
 /* footer */
@@ -1471,7 +1416,7 @@ ol {
   border-bottom: none !important;
 }
 .nav-link {
-  color: #ad9292 ;
+  color: #ad9292;
 }
 .nav-link.active {
   border: none !important;
@@ -1483,9 +1428,10 @@ ol {
   color: #00223e !important;
   font-weight: 600;
 }
-
-
-
+/* 제품 소개 탭 */
+.half-box > div {
+  width: 45%;
+}
 /* * * * * *  제품소개탭 * * * * * */
 /* .d-none{
   display: none;
@@ -1538,3 +1484,484 @@ ol {
 .tab-content-box{
   display: none;
 } */
+
+/* home popup css */
+.popup-size {
+  width: 521px;
+  height: 634px;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  position: absolute;
+  /* border: 2px solid #ccc; */
+  z-index: 999;
+  visibility: hidden;
+  background-image: url(/assets/images/popup-award-certificate.png);
+}
+.popup-location-1 {
+  /* background-image: url(/assets/images/tta-popup-img.png); */
+  /* background-image: url(/assets/images/popup-hitech.jpg); */
+  /* background-image: url(/assets/images/popup-award-certificate.png); */
+  top: 50px;
+  left: 100px;
+}
+/* .popup-location-2 {
+  background-image: url(/assets/images/popup-hitech.jpg);
+  top: 50px;
+  left: 690px;
+} */
+.popup-size div {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+
+.popup-size div a {
+  margin-left: 7px;
+}
+
+/* 스마트 유지관리 플랫폼 */
+.color-default {
+  color: #333;
+}
+.title-mg {
+  margin-bottom: 20px;
+}
+.down-mg {
+  margin-bottom: 70px;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table-align {
+  border-spacing: 15px 0px;
+  border-radius: 5px;
+  margin: auto;
+  border-collapse: separate;
+  border: 1px solid #ccc;
+  padding: 10px 5px;
+  width: 95%;
+}
+.table-align thead tr th {
+  text-align: center;
+  width: 30%;
+}
+.table-align tbody tr td {
+  width: 30%;
+}
+.border {
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  margin: 100px 0;
+}
+.effect-frame {
+  margin: auto;
+  width: 93%;
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 7px;
+}
+.effect-frame dl {
+  margin-left: 30px;
+  width: 33%;
+}
+.effect-frame dt {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.effect-frame dl:first-child {
+  margin-left: 0;
+}
+.feature-frame {
+  margin: 0 40px;
+  padding: 30px 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+}
+.feature-img {
+  margin-right: 70px;
+}
+.consist-wrap {
+  flex-wrap: wrap;
+  display: flex;
+}
+.consist-text {
+  display: flex;
+  margin-bottom: 20px;
+}
+.consist-text dl dd:first-child {
+  font-size: 26px;
+}
+.consist-text dl dt {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.consist-text dl dt img {
+  width: 100%;
+}
+.consist-text span {
+  margin-right: 20px;
+  color: #aaa;
+  font-size: 24px;
+  font-weight: 600;
+}
+.consist-text dl dt {
+  margin: 15px 0 30px 0;
+}
+
+/* 스마트 유지관리 반응형 */
+@media (max-width: 992px) {
+  .feature-box {
+    width: 47%;
+  }
+}
+@media (max-width: 768px) {
+  .effect-frame {
+    display: block;
+  }
+  .effect-frame dl {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .effect-frame dl:last-child {
+    margin-bottom: 0;
+  }
+  .effect-frame dt {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .feature-frame {
+    display: block;
+  }
+  .feature-frame .feature-img {
+    text-align: center;
+    margin: 0;
+  }
+}
+.exam-frame {
+  margin: 0px 40px;
+}
+.exam-frame:first-child {
+  margin-bottom: 50px;
+}
+.exam-frame h6 {
+  vertical-align: top;
+  display: inline-block;
+}
+.exam-frame ul {
+  display: inline-block;
+  margin-left: 40px;
+}
+.img-mg {
+  margin: 30px 0;
+}
+.img-mg-center {
+  margin: 50px 0;
+  text-align: center;
+}
+.img-mg-center img {
+  width: 100%;
+}
+.content-box-style {
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+.content-box-style2 {
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+.num-style {
+  color: #aaa;
+  font-size: 24px;
+  font-weight: 600;
+}
+.content-style {
+  margin-left: 30px;
+}
+.content-style dl dt {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.content-style dl dd {
+  color: #777;
+}
+.content-border-style {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+.num-deco {
+  border-bottom: 2px solid #aaa;
+  height: 32px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.content-border-style dl {
+  margin-left: 30px;
+  margin-bottom: 0;
+}
+.content-border-style dl dt {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.content-border-style dl dd {
+  color: #777;
+}
+
+.arrow-circle {
+  width: 65px;
+  height: 65px;
+  margin: 35px auto;
+  border: 1px dotted #777;
+  border-radius: 50px;
+  text-align: center;
+}
+.arrow-circle img {
+  opacity: 0.7;
+  transform: rotate(90deg);
+  width: 30px;
+  margin-top: 17px;
+}
+.certificate-bg {
+  background-color: #eee;
+  height: 370px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificate-bg img {
+  width: 22%;
+  margin-left: 50px;
+}
+.certificate-bg img:first-child {
+  margin-left: 0;
+}
+.ipes-box {
+  margin-bottom: 20px;
+  align-items: center;
+}
+.num-size {
+  font-size: 30px;
+  font-weight: 600;
+}
+.ipes-box ul {
+  color: #777;
+  margin-left: 30px;
+}
+
+/* 불법주정차 */
+
+.feature-box-second {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  display: flex;
+}
+.feature-box-second > span {
+  border-bottom: 2px solid #aaa;
+  height: 32px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+.feature-box-second dl {
+  margin-left: 30px;
+  margin-bottom: 0;
+}
+.feature-box-second dl dt {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+/* 지능형 교통관리 */
+.content-style-double dt {
+  margin-bottom: 15px;
+}
+.content-style-double dt:first-child {
+  font-size: 26px;
+}
+.content-style-double dt:nth-child(2) {
+  font-size: 20px;
+}
+.content-style-double dd {
+  color: #444;
+  margin-bottom: 0;
+}
+.emphasis-color {
+  color: #bc0b44 !important;
+}
+
+/* * * * * cctv * * * * */
+.feature-align {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 30px;
+}
+.feature-box {
+  display: flex;
+  width: 32%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+.feature-box > span {
+  border-bottom: 2px solid #aaa;
+  height: 32px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+.feature-box > div {
+  margin-left: 30px;
+}
+.feature-box > div span {
+  display: block;
+}
+/* cctv 992px 반응형 */
+@media (max-width: 992px) {
+  .feature-box {
+    width: 47%;
+  }
+}
+@media (max-width: 768px) {
+  .feature-box {
+    width: 100%;
+  }
+}
+
+/* 제품 소개 반응형 */
+@media (max-width: 992px) {
+  .respone-none {
+    display: none;
+  }
+  .half-box > div {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .respone-block {
+    display: block !important;
+  }
+}
+
+/* mas */
+.table-img img {
+  width: 100%;
+}
+.mas-table {
+  text-align: center;
+}
+.mas-table tbody tr td {
+  vertical-align: middle;
+}
+
+/* 테이블 */
+.product-table {
+  width: 100%;
+  margin: auto;
+}
+.product-table,
+.product-table thead tr th,
+.product-table tbody tr td {
+  border: 2px solid #333;
+  padding-left: 10px;
+}
+.product-table thead tr {
+  height: 40px;
+  text-align: center;
+}
+.product-table thead tr th:first-child {
+  /* width: 27%; */
+  width: 28%;
+}
+.bold {
+  font-weight: 600;
+}
+
+.color-gray {
+  background-color: #d8d8d8;
+}
+.color-red {
+  background-color: #b64d4b;
+  color: #fff;
+}
+.color-black {
+  background-color: #485152;
+  color: #fff;
+}
+
+/* 사업소개 공통 레이아웃 css */
+.content-box {
+  margin-left: 30px;
+  margin-bottom: 50px;
+  display: flex;
+}
+.content-box span {
+  color: #aaa;
+  font-size: 24px;
+  font-weight: 600;
+}
+.content-box > div {
+  width: 100%;
+  margin-left: 30px;
+}
+.content-box div h3 {
+  margin-bottom: 20px;
+}
+.content-box div .content-sub-title {
+  margin-bottom: 20px;
+  color: #bc0b44;
+  font-size: 18px;
+}
+.content-box div .content-text {
+  margin-bottom: 20px;
+}
+.content-box div .content-img {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.content-box div .content-img dl {
+  margin-left: 10px;
+}
+.content-box div .content-img dl dd {
+  color: #777;
+  margin-top: 20px;
+  text-align: center;
+}
+.text-bg {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+@media (max-width: 992px) {
+  .content-box div .content-img {
+    display: block;
+    text-align: center;
+  }
+  .content-box div .content-img img {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .content-box {
+    margin-left: 0;
+  }
+  .content-box > div {
+    margin-left: 10px;
+  }
+}

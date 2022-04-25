@@ -8,7 +8,8 @@
 <body class="{{ page.layout | append: '-template' }}">
   {% include sub_header.html %}
 
-  {% include business_banner.html %}
+  <!-- {% include business_banner.html %} -->
+  {% include default_banner.html %}
 
   <main role="main">
 
@@ -45,7 +46,7 @@
           <a class="nav-link {% if page.url contains '/business/facesafe/' %} active {% endif %}" id="business-tab-5"
             href="{{ base_path }}/business/facesafe/">
             Face Safe</a>
-        </li>
+        </li> 
         <!-- <li class="nav-item">
             <a class="nav-link {% if page.url contains '/business/timegram/' %} active {% endif %}" id="business-tab-6"  href="{{ base_path }}/business/timegram/" >
               타임그램(애플리케이션)</a>
