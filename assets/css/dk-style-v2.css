@@ -1869,6 +1869,11 @@ ol {
   vertical-align: middle;
 }
 
+.mas-default-logo{
+  width: 60% !important;
+  margin: 20px;
+}
+
 /* 테이블 */
 .product-table {
   width: 100%;
