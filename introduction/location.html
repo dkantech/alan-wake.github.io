@@ -9,9 +9,132 @@ tags: []
 
 <div>
 <!-- 회사위치 작업 -->
+<div id="container">
+    <section id="location">
+        <div id="location-text">
+            <h2>회사위치</h2>
+            <p>DK A.N.T 본사와 공장 위치정보를 안내해 드립니다.</p>
+        </div>
+        <div class="tabs">
+            <input id="head-office" type="radio" name="tab_item" checked>
+            <label class="tab_item" for="head-office">본사</label>
+            <input id="factory" type="radio" name="tab_item">
+            <label class="tab_item" for="factory">공장</label>
+            <div class="tab_content" id="head-office-content">
+                <h4>DK A.N.T 본사</h4>
+                <table class="head-office">
+                    <tbody>
+                        <tr>
+                            <td>주소</td>
+                            <td>서울특별시 송파구 송파대로 20길 4, 헤브론복합빌딩 302호(문정동)</td>
+                        </tr>
+                        <tr>
+                            <td>전화</td>
+                            <td>02-459-7571</td>
+                        </tr>
+                        <tr>
+                            <td>팩스</td>
+                            <td>02-459-7572</td>
+                        </tr>
+                        <tr>
+                            <td>이메일</td>
+                            <td>ydk@dkant.net</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="location-map">
+                    <h3>위치</h3>
+                    <div id="map-api">
+                        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fb28002e8b576078f068f68afff3f1b5"></script>
+                        <script>
+                            let headContainer = document.querySelector("#head-office-content > #location-map > #map-api");
 
+                            let headOptions = {
+                                center: new kakao.maps.LatLng(37.485565830462704, 127.12321002260744),
+                                level: 2
+                            }
+                            
+                            
+
+                            let headOfficeMap = new kakao.maps.Map(headContainer, headOptions);
+
+                            let headMarkerPosition = new kakao.maps.LatLng(37.485565830462704, 127.12321002260744);
+
+                            let headMarker = new kakao.maps.Marker({
+                                position: headMarkerPosition
+                            });
+
+                            headMarker.setMap(headOfficeMap);
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_content" id="factory-content">
+                <h4>DK A.N.T 공장</h4>
+                <table class="factory">
+                    
+                    <tbody>
+                        <tr>
+                            <td>주소</td>
+                            <td>경기도 하남시 하남대로 947, D동 1316호(풍산동, 하남테크노벨리U1 센터)</td>
+                        </tr>
+                        <tr>
+                            <td>전화</td>
+                            <td>02-459-7571</td>
+                        </tr>
+                        <tr>
+                            <td>팩스</td>
+                            <td>02-459-7572</td>
+                        </tr>
+                        <tr>
+                            <td>이메일</td>
+                            <td>ydk@dkant.net</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="location-map" onclick="relayout()" >
+                    <h3 onclick="resizeMap()">위치</h3>
+                    <div id="map-api">
+                        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fb28002e8b576078f068f68afff3f1b5"></script>
+                        <script>
+                            let factoryContainer = document.querySelector("#factory-content > #location-map > #map-api");
+                            let factoryOptions = {
+                                center: new kakao.maps.LatLng(37.546104418219926, 127.19359554896792),
+                                level: 3
+                            };
+
+
+                            let factoryMap = new kakao.maps.Map(factoryContainer, factoryOptions);
+
+                            $(".tabs").click(function(e) {
+                                // e.preventDefault();
+                                $(this).tab("show");
+                                setTimeout(function() {
+                                    factoryMap.relayout();
+                                    factoryMap.setCenter(new kakao.maps.LatLng(37.546104418219926, 127.19359554896792))
+                                }, 0);
+                            })
+                            function resizeMap() {
+                                let factoryContainer = document.querySelector("#factory-content > #location-map > #map-api");
+                                factoryContainer.style.width = "100%";
+                                factoryContainer.style.height = "100%"; 
+                            };
+
+                            let factoryMarkerPosition = new kakao.maps.LatLng(37.546104418219926, 127.19359554896792);
+
+                            let factoryMarker = new kakao.maps.Marker({
+                                position: factoryMarkerPosition
+                            });
+
+                            factoryMarker.setMap(factoryMap);
+                        </script>
+                    </div>
+                </div>
+        </div>
+    </section>
+</div>
 </div>
 
 <style>
-
+    
 </style>
