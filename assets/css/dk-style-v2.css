@@ -118,13 +118,16 @@ header {
 }
 .sub-header {
   background-color: rgba(0, 0, 0, 0.1);
+  height: 100%;
 }
 .sub-header h1 {
   color: #fff;
-  text-align: center;
-  line-height: 250px;
   font-weight: 500;
   font-size: 35px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .triangle-bottomleft {
   width: 0;
@@ -769,7 +772,7 @@ a.tag {
 
 @media (max-width: 400px) {
   section {
-    height: 530px;
+    /* height: 530px; */
   }
 }
 
@@ -874,6 +877,7 @@ a.tag {
   font-size: 20px;
 }
 #back-to-top {
+  z-index: 100;
   width: 40px;
   height: 40px;
   background-color: #38a0b7;
@@ -1527,7 +1531,7 @@ input[name="tab_item"] {
 
 
 .head-office > tbody > tr > td {
-  max-width: 300px;
+  max-width: 260px;
 }
 
 .head-office > tbody > tr:nth-child(1) > td:nth-child(1) {
@@ -1548,7 +1552,7 @@ input[name="tab_item"] {
 }
 
 .factory > tbody > tr > td {
-  max-width: 300px;
+  max-width: 260px;
 }
 
 .factory > tbody > tr:nth-child(1) > td:nth-child(1) {
@@ -2348,10 +2352,14 @@ th:first-child, td:first-child {
 .mas-table tbody tr td {
   vertical-align: middle;
 }
-
 .mas-default-logo{
   width: 60% !important;
-  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .mas-default-logo{
+    width: 100% !important;
+  }
 }
 
 /* 테이블 */
