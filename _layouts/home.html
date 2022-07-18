@@ -9,11 +9,13 @@
 </head>
 
 <body class="{{ page.layout | append: '-template' }}">
+    <div id="popup-mask"></div>
     <div id="noticePopup" class="popup-size popup-location-1">
-        <div>
+        <div class="popup-content">
+            <!-- .close -->
             <input id="checkToday" type="checkbox" name="chkbox" value="checkbox">
-            <label for="checkToday" style="color: #fff;">오늘 하루 이 창을 열지 않음</label>
-            <a href="javascript:closeWin();" style="color: #fff;">[닫기]</a>
+            <label for="checkToday"  id="popup-text">다시 보지 않기</label>
+            <a href="javascript:closeWin();" id="close">닫기</a>
         </div>
     </div>
     <!-- <div id="noticePopup" class="popup-size popup-location-2">
@@ -62,6 +64,7 @@
 
     <script>
         let popup = document.querySelector("#noticePopup");
+        // let mask = document.querySelectort("#popup-mask");
 
         function setCookie(name, value, expiredays) {
             var todayDate = new Date();
@@ -79,17 +82,30 @@
             // path=/ 도메인 내 모든 곳에서 접근 가능
             // todayDate.toUTCString()의 todayDate는 현재 시각인가? 두 번째 줄은 어떻게 활용?
         }
+        
+        // 팝업 마스크 없애는 부분.
+        const close = document.querySelector("#close");
+        const popupMask = document.querySelector("#popup-mask");
+        close.addEventListener("click", () => {
+            popupMask.style.display = "none";
+        });
+
+
         function closeWin() {
             if (document.querySelector("#checkToday").checked) {
                 setCookie("maindiv", "done", 1);
                 // notice_form의 체크박스가 체크 된다면, 
                 // maindiv = done; path=/; Expires= 현재 시간 
             }
-            if (popup) popup.style.visibility = "hidden";
+            if (popup) {
+                popup.style.visibility = "hidden";
+            }
         }      // noticePopup이 숨겨짐.
 
 
-        if (popup) popup.style.visibility = "visible";
+        if (popup){
+            popup.style.visibility = "visible";
+        } 
 
         cookiedata = document.cookie;
         console.log(cookiedata)
