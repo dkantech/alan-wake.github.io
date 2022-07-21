@@ -94,7 +94,7 @@ header {
 }
 .mobile-header-menu {
   position: absolute;
-  z-index: 1000;
+  /* z-index: 1000; */
   left: 0;
   top: 0;
   width: 100%;
@@ -1440,6 +1440,27 @@ ol {
     width: 80px;
     height: 80px;
   }
+
+  #wrap > #main-ability > #ability-image > #ability-list {
+    grid-template-columns: repeat(2, 175px);
+    place-items: center;
+    grid-auto-rows: 175px;
+   }
+ 
+   #wrap > #main-ability > #ability-image > #ability-list > .ability {
+     width: 190px;
+     height: 190px;
+     padding: 35px 0;
+ 
+   }
+
+   #wrap > #main-ability > #ability-image > #ability-list > .ability > h5 {
+    font-size: 15px;
+   }
+
+   #wrap > #main-ability > #ability-image > #ability-list > .ability > p {
+    font-size: 10px;
+   }
 }
 
 
@@ -1970,6 +1991,7 @@ th:first-child, td:first-child {
 } */
 
 /* home popup css */
+
 /* 메인페이지 팝업 */
 
 #popup-mask {
@@ -1984,9 +2006,10 @@ th:first-child, td:first-child {
 .popup-content {
   width: 100%;
   display: flex;
+  /* margin: auto 0 0 auto; */
   /* justify-content: right; */
   /* padding: 0 140px; */
-  height: 21px;
+  /* height: 21px; */
 }
 
 #checkToday {
@@ -2022,19 +2045,27 @@ th:first-child, td:first-child {
 
 #popup-text, #close {
   cursor: pointer;
+  /* margin-top: 630px; */
 }
 
+#popup-fixed {
+  position: fixed;
+  /* top: 50px; */
+  left: 50%;
+  /* bottom: 0; */
+  z-index: 99999;
+  transform: translateX(-50%);
+}
 
-
-.popup-size {
+ .popup-size {
   width: 520px;
   height: 640px;
   background-size: cover;
   background-repeat: no-repeat;
-  position: fixed;
+  /* position: fixed; */
   /* border: 2px solid #ccc; */
-  z-index: 999;
-  visibility: hidden;
+  z-index: 99999;
+  /* visibility: hidden; */
   background-image: url(/assets/images/popup-award-certificate.png);
 }
 .popup-location-1 {
@@ -2042,9 +2073,7 @@ th:first-child, td:first-child {
   /* background-image: url(/assets/images/popup-hitech.jpg); */
   /* background-image: url(/assets/images/popup-award-certificate.png); */
   user-select: none;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+  
 }
 /* .popup-location-2 {
   background-image: url(/assets/images/popup-hitech.jpg);
@@ -2052,9 +2081,43 @@ th:first-child, td:first-child {
   left: 690px;
 } */
 .popup-size div {
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   /* right: 10px; */
+}
+
+/* 팝업 반응형 576px */
+
+@media (max-width: 576px) {
+  /* .popup-content {
+    margin-top: 600px;
+  } */
+  #popup-fixed {
+    width: 100%;
+  }
+
+  .popup-size {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    /* object-fit: cover; */
+    height: 455px;
+    /* height: 100%; */
+    /* transform: translateX(-50%); */
+    /* position: absolute; */
+    /* top: -40px; */
+  }
+
+  .popup-content {
+    margin-top: auto;
+  }
+
+  .popup-location-1 {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-image: url(/assets/images/popup-award-certificate.png); */
+  }
+  
 }
 
 /* .popup-size div a {
@@ -2161,6 +2224,8 @@ th:first-child, td:first-child {
 }
 @media (max-width: 768px) {
   .effect-frame {
+    width: 100%;
+    height: 100%;
     display: block;
   }
   .effect-frame dl {
@@ -2182,6 +2247,21 @@ th:first-child, td:first-child {
   .feature-frame .feature-img {
     text-align: center;
     margin: 0;
+  }
+
+  .img-mg {
+    background-image: url("../images/대지-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 576px) {
+  .img-mg {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/대지-1.png");
+    background-repeat: no-repeat;
   }
 }
 .exam-frame {
