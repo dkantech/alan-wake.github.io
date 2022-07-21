@@ -2000,16 +2000,30 @@ th:first-child, td:first-child {
   background: #000;
   position: fixed;
   z-index: 1;
-  opacity: .5;
+  opacity: .4;
+}
+
+#popup-fixed {
+  position: fixed;
+  margin-top: 60px;
+  z-index: 99999;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .popup-content {
   width: 100%;
   display: flex;
-  /* margin: auto 0 0 auto; */
-  /* justify-content: right; */
-  /* padding: 0 140px; */
-  /* height: 21px; */
+  transform: translateY(-5px);
+}
+
+.popup-size {
+  width: 500px;
+  user-select: none;
+}
+
+.popup-size img {
+  width: 100%;
 }
 
 #checkToday {
@@ -2045,84 +2059,34 @@ th:first-child, td:first-child {
 
 #popup-text, #close {
   cursor: pointer;
-  /* margin-top: 630px; */
 }
 
-#popup-fixed {
-  position: fixed;
-  /* top: 50px; */
-  left: 50%;
-  /* bottom: 0; */
-  z-index: 99999;
-  transform: translateX(-50%);
-}
 
- .popup-size {
-  width: 520px;
-  height: 640px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  /* position: fixed; */
-  /* border: 2px solid #ccc; */
-  z-index: 99999;
-  /* visibility: hidden; */
-  background-image: url(/assets/images/popup-award-certificate.png);
-}
-.popup-location-1 {
-  /* background-image: url(/assets/images/tta-popup-img.png); */
-  /* background-image: url(/assets/images/popup-hitech.jpg); */
-  /* background-image: url(/assets/images/popup-award-certificate.png); */
-  user-select: none;
-  
-}
-/* .popup-location-2 {
-  background-image: url(/assets/images/popup-hitech.jpg);
-  top: 50px;
-  left: 690px;
-} */
-.popup-size div {
-  /* position: absolute;
-  bottom: 0; */
-  /* right: 10px; */
-}
+/* 팝업 반응형 1200px */
 
+@media (max-width: 1200px) {
+  #popup-fixed {
+    margin-top: 0;
+  }
+
+}
 /* 팝업 반응형 576px */
 
-@media (max-width: 576px) {
-  /* .popup-content {
-    margin-top: 600px;
-  } */
+@media (max-width: 500px) {
   #popup-fixed {
     width: 100%;
+    top: 0;
+    bottom: 0;
   }
 
   .popup-size {
     width: 100%;
-    background-size: cover;
-    background-position: center;
-    /* object-fit: cover; */
-    height: 455px;
-    /* height: 100%; */
-    /* transform: translateX(-50%); */
-    /* position: absolute; */
-    /* top: -40px; */
   }
 
   .popup-content {
     margin-top: auto;
   }
-
-  .popup-location-1 {
-    /* width: 100%; */
-    /* height: 100%; */
-    /* background-image: url(/assets/images/popup-award-certificate.png); */
-  }
-  
 }
-
-/* .popup-size div a {
-  margin-left: 7px;
-} */
 
 /* 스마트 유지관리 플랫폼 */
 .color-default {
