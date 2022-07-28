@@ -69,7 +69,7 @@
 
     <script>
         let popup = document.querySelector("#popup-fixed");
-        // let mask = document.querySelectort("#popup-mask");
+        const popupMask = document.querySelector("#popup-mask");
 
         function setCookie(name, value, expiredays) {
             var todayDate = new Date();
@@ -90,10 +90,15 @@
         
         // 팝업 마스크 없애는 부분.
         const close = document.querySelector("#close");
-        const popupMask = document.querySelector("#popup-mask");
+       
+        // let popupText = document.querySelectort("#popup-text");
         close.addEventListener("click", () => {
             popupMask.style.display = "none";
         });
+
+        // popupText.addEventListener("click", () => {
+        //     popupMask.style.display = "none";
+        // })
 
 
         function closeWin() {
