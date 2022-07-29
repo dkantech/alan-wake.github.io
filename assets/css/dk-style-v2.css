@@ -78,6 +78,10 @@ header {
 #navbarsExampleDefault ul li {
   padding: 0 15px;
 }
+
+#navbarsExampleDefault {
+  z-index: 99999;
+}
 .searchIcon {
   width: 30px;
   margin-right: 10px;
@@ -1782,6 +1786,8 @@ th:first-child, td:first-child {
   }
   .sub-header h1 {
     font-size: 23px;
+    text-align: center;
+    /* margin: 0 15px; */
   }
 }
 
@@ -2089,9 +2095,20 @@ th:first-child, td:first-child {
 }
 
 /* 스마트 유지관리 플랫폼 */
+
+/* /assets/images/fclt-list.png */
 .color-default {
   color: #333;
 }
+
+.img-mg {
+  width: 100%;
+  height: 400px;
+  background-image: url("../images/fclt-list.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .title-mg {
   margin-bottom: 20px;
 }
@@ -2212,20 +2229,34 @@ th:first-child, td:first-child {
     text-align: center;
     margin: 0;
   }
-
+  
   .img-mg {
-    background-image: url("../images/대지-1.png");
-    background-size: cover;
+    display: none;
+  }
+
+
+  .img-mb {
+    width: 100%;
+    height: 800px;
+    background-image: url("../images/fclt-list-mg.png");
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
+    display: block;
   }
 }
 
 @media (max-width: 576px) {
-  .img-mg {
+  .img-mb {
     width: 100%;
-    height: 100%;
-    background-image: url("../images/대지-1.png");
+    height: 800px;
+    background-size: contain;
+    background-position: center;
+    background-image: url("../images/fclt-list-mg.png");
     background-repeat: no-repeat;
+  }
+  .img-mg {
+    display: none;
   }
 }
 .exam-frame {
