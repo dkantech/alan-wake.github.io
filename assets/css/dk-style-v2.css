@@ -2005,7 +2005,7 @@ th:first-child, td:first-child {
 
 #popup-fixed {
   position: fixed;
-  margin-top: 60px;
+  margin-top: 2%;
   z-index: 99999;
   left: 50%;
   transform: translateX(-50%);
