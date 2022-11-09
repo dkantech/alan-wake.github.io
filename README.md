@@ -48,6 +48,12 @@ $ bundle install
 ```
 $ bundle exec jekyll serve
 ```
+gem을 찾을 수 없다는 메세지가 출력되면 
+```
+ bundle add webrick
+```
+로 버전업되면서 누락된 gem을 추가해주면 된다.
+
 개발환경이 정상적으로 구동되면 웹브라우저에서 localhost:4000으로 접속하면 블로그 사이트가 열리는걸 확인할 수 있다.
 #
 #### 4. 배포(발행)
