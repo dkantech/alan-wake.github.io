@@ -9,7 +9,8 @@
 </head>
 
 <body class="{{ page.layout | append: '-template' }}">
-    <div id="popup" style="visibility:hidden">
+    <!-- 팝업창 기능 꺼놓음. 다시 사용 시 주석해제 -->
+    <!-- <div id="popup" style="visibility:hidden">
         <div id="popup-mask"></div>
         <div id="popup-fixed">
             <div id="noticePopup" class="popup-size">
@@ -19,15 +20,6 @@
                 <div onClick="closeWin()" id="close">닫기</div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    
-    <!-- <div id="noticePopup" class="popup-size popup-location-2">
-        <div>
-            <input id="checkToday" type="checkbox" name="chkbox" value="checkbox">
-            <label for="checkToday" style="color: #fff;">오늘 하루 이 창을 열지 않음</label>
-            <a href="javascript:closeWin();" style="color: #fff;">[닫기]</a>
         </div>
     </div> -->
 
@@ -49,6 +41,7 @@
 
 
     <script>
+        /* 팝업창 기능 꺼놓음. 다시 사용 시 주석해제
         const popup = document.querySelector("#popup");
         
         const cookiedata = document.cookie;
@@ -59,14 +52,7 @@
         function setCookie(name, value, expiredays) {
             var todayDate = new Date();
             todayDate.setDate(todayDate.getDate() + expiredays);
-
-            // todayDate.getDate() + expiredays : 현재날짜의 date를 가져와서 expiredays를 추가
             document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toUTCString() + ";"
-            // document.cookie = "Name=Value(값);Expires=날짜;Domain=도메인;Path=경로;Secure"; 
-            // name = 값; path=/; Expires= 현재 시간;
-            // name과 값 : 데이터를 저장하고 읽는 데 사용하는 속성
-            // Expires: 쿠키의 파기 날짜를 지정하는 속성 UTC형식으로 적어야함. 별도 안 쓸 시 브라우저 종료 시 쿠키 삭제
-            // path=/ 도메인 내 모든 곳에서 접근 가능
         }
         
         function noVisible() {
@@ -77,7 +63,7 @@
         function closeWin() {
             popup.style.visibility = "hidden";
         }  
-      
+      */
 
     </script>
 </body>
