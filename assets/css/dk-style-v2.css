@@ -236,7 +236,7 @@ section .banner-text-main h2 + p {
 @media (min-width: 1200px) {
   /* * * * * * * section 1200px * * * * * * */
   .banner-text-main > div {
-    max-width: 450px;
+    max-width: 475px;
   }
   .banner-win-text > div {
     max-width: 500px;
